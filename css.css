@@ -1,0 +1,18 @@
+@charset "utf-8";
+/* CSS Document */
+
+/* TOOL 0.1 */
+
+.root.tool.frame {
+	display: flex;
+	flex-direction: row;
+}
+
+.toolbar {
+	width: 4em;
+}
+
+.wrokspace {
+	width: 100%;
+	height: 100%
+}
