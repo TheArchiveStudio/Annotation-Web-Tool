@@ -1,6 +1,6 @@
 <!doctype html>
 
-<!-- ANNOTATOR TOOL 0.2 -->
+<!-- ANNOTATOR TOOL 0.3 -->
 
 <html class="root">
 	
@@ -27,67 +27,53 @@
 		<!-- list -->
 		<script type="text/javascript" src="list.js"></script>
 	</head>
-
-	
-<!-- Aimmo
-/*annotator-tool ● */<annotator-tool class="ng-star-inserted">
-	/*annotator header ● */<annotator-header>
-	/*annotator*/<annotator>
-		/*annotator-contaner*/<div class="annotator-container">
-			/*content ○ */<div class="content">
-				/*content-workspce area ○ */<div class="content__workspace-area">
-					/*template-wrapper*/<div class="content__workspace-area__template-wrapper">
-						/*app-template tpye*/<app-image-template class="ng-star-inserted">
-							/*template tpye*/<div class="template-image">
-								/*toolbar*/   <new-control-area class="ng-star-inserted">
-								/*template-wrapper*/ <div class="templates-wrapper">
-									/*template*/<div class="template-image__svg-wrapper">
-										<svg class="image-annotator mode-move-item">
-											<defs>
-											<g>
-												/*image*/<image class="target-image">
-												/*item*/ <g class="itme">
-													<polygon class="polygon selectable pointer item" />
-													<polygon class="dotted-line" />
-												</g> ...
--->
 	
 	<!-- BODY -->
 	<body class="root">
+		
 		<!-- Root Frame -->
 		<div class="root frame">
 			
 			<!-- Tool -->
 			<main class="tool">
-				<!-- Tool Template -->
-				<div class="tool-template">
 					
 					<!-- Annotator -->
 					<div class="annotator">
-						<!-- Annotator Template -->
-						<div class="annotator-template">
 							
 							<!-- Annotator Head -->
 							<nav class="annotator-header"></nav>
 							
 							<!-- Image Annotator -->
-							<div class="image annotator">
+							<div class="image-annotator">
 								
-								<!-- Controller -->
-								<article class="controller">1</article>
-								
-								<!-- Workspace -->
-								<section class="wrokspace">
-									<div class="layer wrapper">
-										<!--  -->
+									<!-- Controller -->
+									<article class="controller">1</article>
+
+									<!-- Workspace -->
+									<section class="templet-image">
 										
-									</div>
-								</section>
+										<svg class="image-annotator mode-move-item">
+											<svg-defs></svg-defs>
+											<!-- svg -->
+											<svg-g>
+
+												<!-- image -->
+												<image class="target-image" />
+												
+												<!-- item -->
+												<g>
+													
+													<polygon class="polygon selectable pointer item" />
+													<polygon class="dotted-line" />
+
+												</g>
+
+											</svg-g>
+										</svg>
+									</section>
 							</div>
-						</div>
 					</div>
-				</div>
-			</main>
+				</main>
 		</div>
 		
 	</body>
