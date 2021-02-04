@@ -1,12 +1,12 @@
 <!doctype html>
 
-<!-- ANNOTATOR TOOL 0.5 -->
+<!-- ANNOTATOR TOOL 0.6 -->
 
 <html class="root">
 	
 	<head>
 		<meta charset="utf-8">
-		<title>tool</title>
+		<title>Annotator</title>
 		
 		<!-- Font -->
 		<link rel="preconnect" href="https://fonts.gstatic.com">
@@ -20,7 +20,7 @@
 		<link type="text/css" rel="stylesheet" href="reset.css" />
 		<link type="text/css" rel="stylesheet" href="color.css" />
 		<link type="text/css" rel="stylesheet" href="root.css" />
-		<link type="text/css" rel="stylesheet" href="tool.css" />
+		<link type="text/css" rel="stylesheet" href="annotator.css" />
 		<link type="text/css" rel="stylesheet" href="developer_mode.css" />
 		
 		<!-- Javascript -->
@@ -32,53 +32,60 @@
 	<body class="root">
 		
 		<!-- Root Frame -->
-		<div class="root frame">
+		<div class="root frame size-inherit">
 			
 			<!-- Tool -->
-			<main class="tool">
+			<main class="root tool size-inherit">
 					
-					<!-- Annotator -->
-					<div class="annotator">
-							
-							<!-- Annotator Head -->
-							<nav class="annotator-header"></nav>
-							
-							<!-- Image Annotator -->
-							<div class="image-annotator">
-								
-									<!-- Controller -->
-									<article class="bar">bar1</article>
+				<!-- Annotator -->
+				<div class="annotator size-inherit">
 
-									<!-- Workspace -->
-									<section class="workspace">
-										
-										<svg class="svg-object">
-											<svg-defs class="svg-element_definitions"></svg-defs>
-											<!-- svg -->
-											<svg-g class="svg-group root">
+					<!-- Annotator Head -->
+					<nav class="annotator-header width-full">annotator-header</nav>
 
-												<!-- image -->
-												<image class="target-image" />
-												
-												<!-- item -->
-												<g class="">
-													
-													<polygon class="polygon selectable pointer item" />
-													<polygon class="dotted-line" />
+					<div class="size-full frame display-flex flex-direction-row">
+					
+						<!-- Image Annotator -->
+						<div class="image-annotator size-inherit frame display-flex flex-direction-column">
 
-												</g>
+							<div class="navigation width-full">top navigation</div>
 
-											</svg-g>
-										</svg>
-									</section>
-								
-										<!-- Controller -->
-									<article class="panel">panel</article>
+							<!-- Row Flex Direction -->
+							<div class="frame size-full display-flex flex-direction-row">
+
+								<!-- Controller -->
+								<article class="toolbar height-full">toolbar</article>
+
+								<!-- Workspace -->
+								<section class="workspace size-full">
+
+									<svg class="svg-object size-inherit">
+
+										<svg-defs class="svg-element_definitions"></svg-defs>
+
+										<!-- svg -->
+										<svg-g class="svg-group root">
+
+											<!-- image -->
+											<image class="target-image" />
+
+											<!-- item -->
+											<g>
+												<polygon class="polygon selectable pointer item" />
+												<polygon class="dotted-line" />
+											</g>
+										</svg-g>
+									</svg>
+								</section>
 							</div>
+						</div>
+					
+						<!-- Controller -->
+						<article class="panel">panel</article>
 					</div>
-				</main>
+				</div>
+			</main>
 		</div>
-		
 	</body>
 	
 </html>
