@@ -1,0 +1,57 @@
+@charset "utf-8";
+/* CSS Document */
+
+/* ROOT 0.4
+ * 기준 값을 가지는 노드의 속성 값을 설정합니다.
+ */
+
+/* TYPOGRAPHY */
+HTML.root {
+	font-size: 62.5%;
+	text-size-adjust: 100%;
+	-webkit-text-size-adjust: 100%;
+	
+	line-height: 1.15;
+}
+
+BODY.root {
+	font-family: nanum-square,sans-serif;
+    font-weight: 400;
+}
+
+/* FRAME
+ * 브라우져에서 문서를 표기할 영역을 정의합니다.
+ * 문서를 표기할 영역에서 내용이 표기될 영역을 정의합니다.
+ */
+
+/* Documnet Out Frame 
+ * 비어있는 여백에는 브라우져에서 지정한 속성이 적용됩니다. */
+HTML.root {
+	display: block;
+	
+	/* Size */
+	width: 100%;
+	height: 100%;
+}
+
+/* Documnet Body Frame 
+ * HTML과 BODY 사이의 여백에는 HTML 에서 지정한 속성이 적용됩니다. */
+BODY.root {
+	position: inherit;
+	display: inherit;
+	
+	/* Size */
+	width: inherit;
+	height: inherit;
+}
+
+/* Document In Frame 
+ * BODY와 Root Frame 사이의 여백에는 HTML 에서 지정한 속성이 적용됩니다. */
+.frame.root {
+	position: absolute;
+	display: inherit;
+	
+	/* Size */
+	width: inherit;
+	height: inherit;
+}
