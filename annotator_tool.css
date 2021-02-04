@@ -1,31 +1,104 @@
 @charset "utf-8";
 /* CSS Document */
 
-/* TOOL 0.11 */
+/* TOOL 0.2 */
 
-.root.tool.annotator.container {
+/* RULE */
+
+.frame.display-flex {
 	display: flex;
+}
+
+.frame.display-flex.flex-direction-row {
 	flex-direction: row;
-	
+}
+
+.frame.display-flex.flex-direction-column {
+	flex-direction: column;
+}
+
+.width-full {
+	width: 100%;
+}
+
+.height-full {
+	height: 100%;
+}
+
+.size-full {
 	width: 100%;
 	height: 100%;
+}
+
+.width-inherit {
+	width: inherit;
+}
+
+.height-inherit {
+	height: inherit;
+}
+
+.size-inherit {
+	width: inherit;
+	height: inherit;
+}
+
+/* Style */
+
+.root.tool {
+	position: inherit;
+	display: inherit;
 	
-	background-color: var(--annotator-backgorund);
+	/* Size */
+	width: inherit;
+	height: inherit;
+}
+
+.annotator {
+	position: inherit;
+	display: flex;
+	flex-direction: column;
 	
+	/* Size */
+	width: inherit;
+	height: inherit;
 	
 	overflow: hidden;
-}
-
-.toolbar {
-	width: 4em;
 	
-	background-color: var(--annotator-tool-container);
+	background-color: #1e1f1f;
+	
+	font-weight: 400;
+	
+	user-select: auto;
 }
 
-.wrokspace {
-	width: 100%;
-	height: 100%;
+.annotator-header {
+	margin-bottom: 1px;
+	
+	/* Size */
+	height: 50px;
+	
+	border-bottom: 1px;
 }
 
+.image-annotator {
+	display: flex;
+	flex-direction: row;
+}
 
+.image-annotator .navigation {
+	height: 44px;
+}
 
+.image-annotator .toolbar {
+	width: 52px;
+}
+
+.image-annotator .svg-object {
+	width: inherit;
+	height: inherit;
+}
+
+.annotator .panel {
+	width: 314px;
+}
