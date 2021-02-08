@@ -1,0 +1,130 @@
+@charset "utf-8";
+/* CSS Document */
+
+/* RESET 0.5
+ * 기술한 속성 값으로 모든 브라우저에서 속성의 기본값을 초기화 합니다.
+ * 속성 값을 상속하도록 기본값을 설정 하였을 때, 하위 노드가 연속적으로 누적되면서 의도치 않은 문제가 발생 할 수 있는 속성의 경우 속성 값 상속을 기본값으로 하지 않는 것을 권장합니다.
+ * Box-Model [width, height, margin, padding, border]
+*/
+
+/* ALL 
+ * 모든 브라우저에 적용 된 기본 값입니다.
+ */
+
+* {
+  /* White Space
+  * 모든 브라우저에 여백이 없습니다. */
+  margin: 0;
+  padding: 0;
+
+  /* Sizing 
+   * 모든 브라우저에 테두리 상자 크기를 사용합니다. */
+  box-sizing: border-box;
+
+  /* Border 
+   * 모든 브라우저에 외각선이 없습니다.
+   * 모든 브라우저에 테이블의 각 셀간 테두리 간격이 없습니다.
+   * 모든 브라우저에 테이블의 각 셀간에 마주한 테두리를 공유하여 사용합니다. */
+  border: 0;
+  border-spacing: 0;
+  border-collapse: collapse;
+
+  /* Align */
+  vertical-align: baseline;
+
+  /* Typography 
+   * 모든 브라우저에 폰트 속성은 부모의 속성를 상속 받습니다. */
+  line-height: inherit;
+
+  font-style: inherit;
+  font-variant: inherit;
+  font-weight: inherit;
+  font-stretch: inherit;
+  font-family: inherit;
+  font-size: inherit;
+
+  text-decoration-style: none;
+}
+
+/* BOX SIZEING
+ * ::before에 
+ * ::after 테두리 상자 크기를 사용합니다. */
+::before, 
+::after {
+  box-sizing: border-box;
+}
+
+/* CURSOR
+ * 모든 브라우저에서 기본 커서를 사용합니다. */
+html {
+  cursor: default;
+}
+
+/* DISPLAY */
+
+/* Block Type Display Elements
+ * Display 속성 기본값이 Block 인 요소들입니다. */
+article, 
+aside, 
+details, 
+figcaption, 
+figure, 
+footer, 
+header, 
+hgroup, 
+menu, 
+nav, 
+section {
+  display: block;
+}
+
+/* NONE DISPLAY
+ * 표기하지 않는 것을 기본값으로 합니다.
+ */
+
+/* HTML Head None Display
+ * HTML의 Head를 표기하지 않습니다. */
+head {
+  display: none;
+}
+
+/* None List Style
+ * List Style 을 나열한 요소에서 사용하지 않습니다. */
+ol, 
+ul {
+  list-style: none;
+}
+
+/* None Quotes Style
+ * quotes(인용) 스타일을 나열한 요소에서 사용하지 않습니다. */
+blockquote, 
+q {
+  quotes: none;
+}
+
+/* EMPTY
+ * 비우는 것을 기본 값으로 합니다.
+ */
+
+/* Empty Content
+ * content 속성을 비웁니다. */
+blockquote:before, 
+blockquote:after,
+q:before, 
+q:after {
+  content: '';
+  content: none;
+}
+
+button {
+	-webkit-writing-mode: horizontal-tb !important;
+    text-rendering: auto;
+    color: -internal-light-dark(black, white);
+    letter-spacing: normal;
+    word-spacing: normal;
+    text-indent: 0px;
+    text-shadow: none;
+    display: inline-block;
+    text-align: center;
+    align-items: flex-start;
+}
