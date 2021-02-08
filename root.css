@@ -1,12 +1,12 @@
 @charset "utf-8";
 /* CSS Document */
 
-/* ROOT 0.4
+/* ROOT 0.5
  * 기준 값을 가지는 노드의 속성 값을 설정합니다.
  */
 
 /* TYPOGRAPHY */
-HTML.root {
+.root-html {
 	font-size: 62.5%;
 	text-size-adjust: 100%;
 	-webkit-text-size-adjust: 100%;
@@ -14,7 +14,7 @@ HTML.root {
 	line-height: 1.15;
 }
 
-BODY.root {
+.root-body {
 	font-family: nanum-square,sans-serif;
     font-weight: 400;
 }
@@ -26,7 +26,7 @@ BODY.root {
 
 /* Documnet Out Frame 
  * 비어있는 여백에는 브라우져에서 지정한 속성이 적용됩니다. */
-HTML.root {
+.root-html {
 	display: block;
 	
 	/* Size */
@@ -36,7 +36,7 @@ HTML.root {
 
 /* Documnet Body Frame 
  * HTML과 BODY 사이의 여백에는 HTML 에서 지정한 속성이 적용됩니다. */
-BODY.root {
+.root-body {
 	position: inherit;
 	display: inherit;
 	
@@ -47,11 +47,79 @@ BODY.root {
 
 /* Document In Frame 
  * BODY와 Root Frame 사이의 여백에는 HTML 에서 지정한 속성이 적용됩니다. */
-.frame.root {
+.root-frame {
 	position: absolute;
 	display: inherit;
 	
 	/* Size */
 	width: inherit;
 	height: inherit;
+}
+
+/* Button */
+
+[type=button], 
+[type=reset],
+[type=submit], 
+button {
+	-webkit-appearance: button;
+}
+
+button, 
+select {
+    text-transform: none;
+}
+
+button, 
+input {
+    overflow: visible;
+}
+
+button, 
+input, 
+optgroup, 
+select, 
+textarea {
+    font-family: inherit;
+    font-size: 100%;
+    line-height: 1.15;
+    margin: 0;
+}
+
+button {
+    appearance: auto;
+	
+	cursor: default;
+	
+    display: inline-block;
+
+	padding: 1px 6px;
+	
+	
+	
+	border-width: 2px;
+    border-style: outset;
+    border-color: -internal-light-dark(rgb(118, 118, 118), rgb(133, 133, 133));
+    border-image: initial;
+	
+	margin: 0em;
+	
+	text-align: center;
+	align-items: flex-start;
+	
+	letter-spacing: normal;
+    word-spacing: normal;
+    text-transform: none;
+    text-indent: 0px;
+	
+	text-rendering: auto;
+	
+-webkit-writing-mode: horizontal-tb !important;
+	
+	font: 400 13.3333px Arial;
+	
+	color: -internal-light-dark(black, white);
+	text-shadow: none;
+	
+	background-color: -internal-light-dark(rgb(239, 239, 239), rgb(59, 59, 59));
 }
