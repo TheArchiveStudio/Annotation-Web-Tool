@@ -1,7 +1,10 @@
 @charset "utf-8";
 /* CSS Document */
-https://github.com/TheArchiveStudio/Annotation-Web-Tool/blob/main/annotator_tool.css
-/* TOOL 0.3 */
+
+/* Page 
+   상세한 값을 설정합니다. */
+
+/* Annotator 0.3 */
 
 .root.tool {
 	position: inherit;
@@ -80,7 +83,7 @@ https://github.com/TheArchiveStudio/Annotation-Web-Tool/blob/main/annotator_tool
 .image-annotator .toolbar-button {
 	margin: 5px 0px;
 	height: 32px;
-    width: 32px;
+	width: 32px;
 	cursor: pointer;
 	border: 1px solid transparent;
 	border-radius: 3px;
