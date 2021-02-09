@@ -1,6 +1,9 @@
 @charset "utf-8";
 /* CSS Document */
 
+/* LAYOUT 0.1 
+   Display & Frame & Gride & Size */
+
 .display--flex {
 	display: flex;
 }
