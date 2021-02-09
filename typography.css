@@ -5,6 +5,9 @@
  * 글자/문장 서식 속성 값을 설정합니다.
  */
 
+/* Root Typography 
+   기준 값을 가지는 타이포그래피 속성 값을 설정합니다. */
+
 .root-html {
 	font-size: 62.5%;
 	text-size-adjust: 100%;
