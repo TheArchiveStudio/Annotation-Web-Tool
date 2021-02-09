@@ -1,0 +1,10 @@
+@charset "utf-8";
+/* CSS Document */
+
+/* DEVELOPER MODE */
+
+* {
+	border: dotted 1px #ACACAC;
+	
+	color: #ffffff;
+}
