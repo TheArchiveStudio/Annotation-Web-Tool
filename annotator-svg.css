@@ -1,18 +1,15 @@
 @charset "utf-8";
 /* CSS Document */
 
-/* annotator-svg 0.2 */
+/* ANNOTATOR-SVG 0.3 (2021-02-17) */
 
-.cross-cursor {
-	cursor: url(cursor.svg) 8.5 8.5, crosshair;
-}
-
+/* SVG-OBJECT */
 .svg-object {
 	width: 100%;
 	height: 100%;
-
+	
 	pointer-events: auto;
-
+	
 	overflow: hidden;
 }
 
@@ -20,18 +17,30 @@
 	transform-origin: 0px 0px;
 }
 
-/* polygon 을 그릴때 마지막 점과 마우스 커서의 사이를 잇는 가상의 선. */
-.polyline {
+/* CURSOR */
+.cross-cursor {
+	cursor: url(cursor.svg) 8.5 8.5, crosshair;
+}
+
+/* POLYGON */
+
+.polygon { }
+
+/* Drawing Polygon 
+   Polygon 을 그릴때 마지막 점과 마우스 커서의 사이를 잇는 가상의 선. */
+.polygon--drawing {
 	pointer-events: none;
 
 	fill: none;
+
 	stroke-dasharray: 1.53846, 1.53846;
 	stroke: rgb(255, 255, 255);
 	stroke-width: 0.512821;	
 }
 
-/* polygon을 그릴 때 빈 영역과 각 점 사이를 잇는 선.  */
-.polygon__line--selectable {
+/* Drew Polygon 
+   Polygon 을 그릴 때 각 점 사이를 잇는 선.  */
+.polygon--drew {
 	fill: none;
 
 	stroke: rgb(225, 116, 252);
@@ -39,16 +48,34 @@
 	stroke-dasharray: 2.5641, 1.02564;
 }
 
-/* 선택 된 polygon 영역의 색과 테두리. */
-.polygon--selectable {
+/* Selected Polygon
+   선택 된 Polygon 의 영역 색과 테두리. */
+.polygon--selected {
 	fill-opacity: 0.1;
 	fill: rgb(235, 59, 89);
+
 	stroke: rgb(215, 39, 69);
 	stroke-width: 0.512821;
 }
 
-/* 사각형을 그릴 때 시작점과 마우스 커서 사이를 잇는 가상의 영역에 색과 테두리. */
-.rect--drawing {
+/* Unselected Polygon
+   선택되지 않은 Polygon 의 영역 색과 테두리. */
+.polygon--unselected {
+	fill-opacity: 0;
+	fill: rgb(235, 59, 89);
+
+	stroke-dasharray: 2.5641, 1.02564;
+	stroke: rgb(215, 39, 69);
+	stroke-width: 0.512821;
+}
+
+/* BOUNDING-RECT */
+
+.bounding-rect { }
+
+/* Drawing Bounding-Rect
+   사각형을 그릴 때 시작점과 마우스 커서 사이를 잇는 가상의 영역에 색과 테두리. */
+.bounding-rect--drawing {
 	fill-opacity: 0;
 	fill: rgb(235, 59, 89);
 
@@ -57,16 +84,28 @@
 	stroke: rgb(215, 39, 69);
 }
 
-/* 사각형을 선택하였을때 영역의 색과 빈 테두리. */
-.rect--selected {
+/* Drew Bounding-Rect 
+   사각형을 그릴 때 시작점과 마우스 커서 사이를 잇는 영역에 색과 테두리.  */
+.bounding-rect--drew {
+	fill-opacity: 0.1;
+	fill: rgb(235, 59, 89);
+
+	stroke: rgb(215, 39, 69);
+	stroke-width: 0.512821;
+}
+
+/* Selected Bounding-Rect
+   사각형을 선택하였을때 영역의 색과 빈 테두리. */
+.bounding-rect--selected {
 	fill-opacity: 0.7;
 	fill: rgb(235, 59, 89);
 
 	user-select: auto;
 }
 
-/* 사각형을 선택하지 않았을때 영역의 색과 테두리. */
-.rect--unselected {
+/* Unselected Bounding-Rect
+   사각형을 선택하지 않았을때 영역의 색과 테두리. */
+.bounding-rect--unselected {
 	fill-opacity: 0;
 	fill: rgb(235, 59, 89);
 
@@ -75,34 +114,131 @@
 	stroke: rgb(215, 39, 69);
 }
 
+/* EXTREME-RECT */
+
+.extreme-rect { }
+
+/* Drawing Extreme-Rect
+   익스트림 사각형을 그릴 때 시작점과 마우스 커서 사이를 잇는 가상의 영역에 색과 테두리. */
+.extreme-rect--drawing { }
+
+/* Drew Extreme-Rect 
+   익스트림 사각형을 그릴 때 시작점과 마우스 커서 사이를 잇는 영역에 색과 테두리.  */
+.extreme-rect--drew { }
+
+/* Selected Extreme-Rect
+   익스트림 사각형을 선택하였을때 영역의 색과 빈 테두리. */
+.extreme-rect--selected {
+	fill-opacity: 0.1;
+	fill: rgb(251, 242, 232);
+
+	stroke: rgb(231, 222, 212);
+	stroke-width: 0.425532;
+}
+
+/* Unselected Extreme-Rect
+   익스트림 사각형을 선택하지 않았을때 영역의 색과 테두리. */
+.extreme-rect--unselected {
+	fill-opacity: 0;
+	fill: rgb(251, 242, 232);
+
+	stroke-dasharray: 2.12766, 0.851064;
+	stroke: rgb(231, 222, 212);
+	stroke-width: 0.425532;
+}
+
+/* CORNER-RECT */
+
+.corner-rect { }
+
+/* Drawing Corner-Rect
+   코너 사각형을 그릴 때 시작점과 마우스 커서 사이를 잇는 가상의 영역에 색과 테두리. */
+.corner-rect--drawing { }
+
+/* Drew Corner-Rect 
+   코너 사각형을 그릴 때 시작점과 마우스 커서 사이를 잇는 영역에 색과 테두리.  */
+.corner-rect--drew { }
+
+/* Selected Corner-Rect
+   코너 사각형을 선택하였을때 영역의 색과 빈 테두리. */
+.corner-rect--selected {
+	fill-opacity: 0.1;
+	fill: rgb(251, 242, 232);
+
+	stroke: rgb(231, 222, 212);
+	stroke-width: 0.425532;
+}
+
+/* Unselected Corner-Rect
+   코너 사각형을 선택하지 않았을때 영역의 색과 테두리. */
+.corner-rect--unselected {
+	fill-opacity: 0;
+	fill: rgb(251, 242, 232);
+
+	stroke-dasharray: 2.12766, 0.851064;
+	stroke: rgb(231, 222, 212);
+	stroke-width: 0.425532;
+}
+
+/* CENTER CIRCLE */
+
+.center-circle { }
+
+/* Drawing Center-Circle 
+   원을 그릴 때 시작한 중심점에서 마우스 커서 사이의 거리에 있는 점들을 이은 가상의 영역에 색과 테두리. */
+.center-circle--drawing { }
+
+/* Drew Center-Circle 
+   원을 그릴 때 시작한 중심점에서 설정한 거리에 있는 점들을 이은 영역에 색과 테두리.  */
+.center-circle--drew { }
+
+/* Unselected Center-Circle 
+   원을 선택하였을때 영역의 색과 빈 테두리. */
+.center-circle--unselected { }
+
+/* Selected Center-Circle 
+   원을 선택하였을때 영역의 색과 빈 테두리. */
+.center-circle--selected { }
+
 /* CONTROL POINT */
-/* Control Point Selection Area
+
+.control-point { }
+
+/* Control-Point Selection Area
    컨트롤 포인트의 선택 영역. */
 .control-point__selection-area {
-	r: 6;
 	cx: 0;
 	cy: 0;
+
+	r: 6;
+
 	opacity: 0;
 	fill: rgb(0, 0, 0);
 }
-/* Unselect Control Point
+/* Unselect Control-Point
    선택하지 않은 컨트롤 포인트. */
 .control-point--unselected {
-	r: 2.5;
 	cx: 0;
 	cy: 0;
+
+	r: 2.5;
+
 	fill: rgb(0, 0, 0);
+
 	stroke: rgb(255, 255, 255);
 	stroke-width: 1;
 }
 
-/* Select Control Point
+/* Select Control-Point
   선택한 컨트롤 포인트. */
 .control-point--selected {
-	r: 3;
 	cx: 0;
 	cy: 0;
+
+	r: 3;
+
 	fill: rgb(168, 220, 86);
+
 	stroke: rgb(255, 255, 255);
 	stroke-width: 1;
 }
