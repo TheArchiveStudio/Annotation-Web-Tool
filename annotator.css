@@ -4,7 +4,7 @@
 /* Page 
    상세한 값을 설정합니다. */
 
-/* Annotator 0.4 */
+/* Annotator 0.41 */
 
 .root.tool {
 	position: inherit;
@@ -34,16 +34,37 @@
 }
 
 .annotator-header {
+	display: flex;
+	box-sizing: border-box;
+	flex-direction: row;
+
+
 	margin-bottom: 1px;
-	
+
 	/* Size */
-	height: 50px;
-	
+	height: 72px;
+
 	border-bottom: 1px;
 }
 
-.image-annotator .navigation {
+.navigation {
+	display: flex;
+
+	position: relative;
+	box-sizing: border-box;
+
 	height: 44px;
+	max-height: 100%;
+
+	margin: 0 1px 0 0;
+
+	flex-direction: row;
+
+	justify-content: center;
+	align-content: center;
+	align-items: center;
+	
+	background: #373838;
 }
 
 .image-annotator .toolbar {
@@ -91,7 +112,16 @@
 }
 
 .annotator .panel {
+	display: flex;
+
+	padding: 0;
+
 	width: 314px;
+	height: 100%;
+
+	flex-direction: column;
+
+	background: #373838;
+
+	overflow-y: auto;
 }
-
-
