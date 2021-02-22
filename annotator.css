@@ -1,12 +1,10 @@
 @charset "utf-8";
 /* CSS Document */
 
-/* Page 
-   상세한 값을 설정합니다. */
+/* Annotator 0.42 (2021-02-22)
+   페이지의 상세한 속성과 값을 설정합니다. */
 
-/* Annotator 0.41 */
-
-.root.tool {
+.tool {
 	position: inherit;
 	display: inherit;
 	
@@ -18,74 +16,111 @@
 .annotator {
 	position: inherit;
 	display: flex;
-	flex-direction: column;
 	
 	/* Size */
 	width: inherit;
 	height: inherit;
 	
-	overflow: hidden;
+	/* Align Content*/
+	flex-direction: column;
 	
+	/* Color */
 	background-color: #1e1f1f;
 	
+	/* Content */
 	font-weight: 400;
 	
+	overflow: hidden;
+	
+	/* Cursor */
 	user-select: auto;
 }
 
 .annotator-header {
+	position: relative;
 	display: flex;
+	
+	/* Size */
 	box-sizing: border-box;
-	flex-direction: row;
 
+	max-height: 100%;
+	height: 72px;	
 
 	margin-bottom: 1px;
-
-	/* Size */
-	height: 72px;
-
+	
+	/* Border */
 	border-bottom: 1px;
+	
+	/* Align Item */
+	align-items: center;
+	flex-direction: row;
+	
+	/* Align Content */
+	justify-content: center;
+	align-content: center;
+	
+	/* Color */
+	background: #424242;
 }
 
 .navigation {
 	display: flex;
 
 	position: relative;
+
+	/* Size */
 	box-sizing: border-box;
 
 	height: 44px;
 	max-height: 100%;
 
 	margin: 0 1px 0 0;
-
+	
+	/* Align Item */
+	align-items: center;
 	flex-direction: row;
-
+	
+	/* Align Content */
 	justify-content: center;
 	align-content: center;
-	align-items: center;
-	
+
+	/* Color */
 	background: #373838;
 }
 
 .image-annotator .toolbar {
 	position: relative;
+	display: flex;
 	
+	/* Size */
 	box-sizing: border-box;
+	
+	height: 100%;
 	width: 52px;
 	
+	/* Align Item */
+	flex-direction: column;
+	
+	/* Color */
 	background: #373838;
 	
+	/* Content Space */
 	overflow-y: auto;
 }
 
 .image-annotator .toolbar__buttons {
 	position: relative;
 	
+	/* Size */
 	padding: 10px 0;
+	
 	max-width: 100%;
 	
+	/* Align Content */
 	justify-content: flex-start;
 	align-content: center;
+	
+	/* Align Item */
 	align-items: center;
 }
 
@@ -93,35 +128,52 @@
 .image-annotator .button {
 	position: relative;
 	
+	/* Size */
 	padding: 10px 0;
+	
 	max-width: 100%;
 	
+	/* Align Content */
 	justify-content: flex-start;
 	align-content: center;
+	
+	/* Align Item */
 	align-items: center;
 }
 
 .image-annotator .toolbar-button {
-	margin: 5px 0px;
+	/* Size */
 	height: 32px;
 	width: 32px;
-	cursor: pointer;
+	
+	margin: 5px 0px;
+	
+	/* Border */
 	border: 1px solid transparent;
 	border-radius: 3px;
+	
+	/* Color */
 	background: transparent no-repeat 50% 50%;
+	
+	/* Cursor */
+	cursor: pointer;
 }
 
 .annotator .panel {
 	display: flex;
 
+	/* Size */
 	padding: 0;
 
 	width: 314px;
 	height: 100%;
 
+	/* Align Item */
 	flex-direction: column;
 
+	/* Color */
 	background: #373838;
-
+	
+	/* Content Space */
 	overflow-y: auto;
 }
