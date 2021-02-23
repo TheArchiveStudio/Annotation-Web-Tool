@@ -4,7 +4,7 @@
 /* Annotator 0.42 (2021-02-22)
    페이지의 상세한 속성과 값을 설정합니다. */
 
-.tool.root {
+.tool-root {
 	position: inherit;
 	display: inherit;
 	
@@ -13,7 +13,7 @@
 	height: inherit;
 }
 
-.annotator {
+.tool-annotator {
 	position: inherit;
 	display: flex;
 	
@@ -36,7 +36,7 @@
 	user-select: auto;
 }
 
-.annotator-header {
+.tool-annotator__header {
 	position: relative;
 	display: flex;
 	
@@ -63,7 +63,7 @@
 	background: #424242;
 }
 
-.navigation {
+.tool-annotator__navigation {
 	display: flex;
 
 	position: relative;
@@ -88,7 +88,7 @@
 	background: #373838;
 }
 
-.image-annotator .toolbar {
+.annotator__toolbar {
 	position: relative;
 	display: flex;
 	
@@ -108,7 +108,7 @@
 	overflow-y: auto;
 }
 
-.image-annotator .toolbar__buttons {
+.annotator__toolbar__buttons {
 	position: relative;
 	
 	/* Size */
@@ -124,24 +124,7 @@
 	align-items: center;
 }
 
-.image-annotator .toolbar__buttons, 
-.image-annotator .button {
-	position: relative;
-	
-	/* Size */
-	padding: 10px 0;
-	
-	max-width: 100%;
-	
-	/* Align Content */
-	justify-content: flex-start;
-	align-content: center;
-	
-	/* Align Item */
-	align-items: center;
-}
-
-.image-annotator .toolbar-button {
+.annotator__toolbar__button {
 	/* Size */
 	height: 32px;
 	width: 32px;
