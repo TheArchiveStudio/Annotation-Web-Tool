@@ -42,55 +42,57 @@
 	</head>
 	
 	<!-- BODY -->
-	<body class="root-body">
+	<body class="body--root">
 		
 		<!-- Root Frame -->
-		<div class="root-frame size--inherit">
+		<div class="frame--root size--inherit">
 			
 			<!-- Tool -->
-			<main class="root tool size--inherit">
+			<main class="tool--root size--inherit">
 					
 				<!-- Annotator -->
-				<div class="annotator size--inherit">
+				<div class="tool--annotator size--inherit">
 
-					<!-- Annotator Head -->
-					<nav class="annotator-header width--full">annotator-header</nav>
+					<!-- Annotator__Header -->
+					<nav class="annotator__header width--full">annotator-header</nav>
 
-					<div class="size--full display--flex flex-direction--row">
+					<!-- layout / Row Flex Direction -->
+					<div class="layout size--full display--flex flex-direction--row">
 					
-						<!-- Image Annotator -->
-						<div class="image-annotator size--inherit display--flex flex-direction--column">
+						<!-- layout / Column Flex Direction -->
+						<div class="layout size--inherit display--flex flex-direction--column">
 
-							<div class="navigation width--full">top navigation</div>
+							<!-- Annotator__Navigation -->
+							<div class="annotator__navigation width--full">top navigation</div>
 
-							<!-- Row Flex Direction -->
-							<div class="frame size--full display--flex flex-direction--row">
+							<!-- frame / Image Annotator -->
+							<div class="image-annotator frame size--full display--flex flex-direction--row">
 
-								<!-- Controller - Toolbar -->
+								<!-- Annotator__Controller__Toolbar -->
 								<article class="toolbar height--full display--flex flex-direction--column">
 									
-									<!-- Buttons -->
+									<!-- Controller__Toolbar__Buttons -->
 									<div class="toolbar__buttons display--flex flex-direction--column">
 										
-										<!-- Move -->
+										<!-- Toolbar__Buttons--Move -->
 										<button class="toolbar-button toolbar-button--move">move</button>
 										
-										<!-- Bounding Box -->
+										<!-- Toolbar__Buttons--Bounding Box -->
 										<button class="toolbar-button toolbar-button--bounding-box">bounding box</button>
 										
-										<!-- Ploygon -->
+										<!-- Toolbar__Buttons--Ploygon -->
 										<button class="toolbar-button toolbar-button--ploygon">ploygon</button>
 										
-										<!-- Delete -->
+										<!-- Toolbar__Buttons--Delete -->
 										<button class="toolbar-button toolbar-button--delete">delete</button>
 										
-										<!-- Reset -->
+										<!-- Toolbar__Buttons--Reset -->
 										<button class="toolbar-button toolbar-button--reset">reset</button>
 									</div>
 								</article>
 
-								<!-- Workspace -->
-								<section class="workspace size--full">
+								<!-- Image Annotator__Workspace -->
+								<section class="image-annotator__workspace size--full">
 
 									<svg class="svg-object size--inherit cross-cursor" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg" version="1.1" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:svgjs="http://svgjs.com/svgjs" pointer-events="auto">
 
