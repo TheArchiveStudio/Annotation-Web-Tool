@@ -123,7 +123,8 @@
 	/* Align Item */
 	align-items: center;
 	
-	overflow-x: auto;
+	/* !temporary */
+	overflow-x: hidden;
 }
 
 .annotator__toolbar__button {
@@ -144,7 +145,7 @@
 	cursor: pointer;
 }
 
-.annotator__workspace { }
+.annotator__workspace--image-annotator { }
 
 .annotator__panel {
 	display: flex;
