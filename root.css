@@ -33,7 +33,7 @@
 
 /* Document In Frame 
  * BODY와 Root Frame 사이의 여백에는 HTML 에서 지정한 속성이 적용됩니다. */
-.frame--root {
+.wire--root {
 	position: absolute;
 	display: inherit;
 	
