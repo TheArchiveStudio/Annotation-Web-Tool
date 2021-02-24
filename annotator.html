@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 
-<!-- ANNOTATOR TOOL 0.92 -->
+<!-- ANNOTATOR TOOL 0.93 (2021-02-24) -->
 
 <html class="html--root">
 	
@@ -65,59 +65,70 @@
 							<!-- Annotator__Navigation -->
 							<div class="annotator__navigation width--full">top navigation</div>
 
-							<!-- frame / Image Annotator -->
-							<div class="image-annotator frame size--full display--flex flex-direction--row">
+							<!-- layout / Row Flex Direction -->
+							<div class="layout size--full display--flex flex-direction--row">
 
 								<!-- Annotator__Controller__Toolbar -->
-								<article class="annotator__toolbar height--full display--flex flex-direction--column">
+								<article class="annotator__toolbar--image-annotator height--full display--flex flex-direction--column">
 									
-									<!-- Controller__Toolbar__Buttons -->
-									<div class="annotator__toolbar__buttons display--flex flex-direction--column">
+									<!-- layout / Controller__Toolbar__Buttons -->
+									<div class="annotator__toolbar__layout-buttons--image-annotator layout display--flex flex-direction--column">
 										
 										<!-- Toolbar__Buttons--Move -->
-										<button class="annotator__toolbar__button toolbar-button--move">move</button>
+										<button class="annotator__toolbar__button--image-annotator toolbar-button--move">move</button>
 										
 										<!-- Toolbar__Buttons--Bounding Box -->
-										<button class="annotator__toolbar__button button--tool--bounding-box">bounding box</button>
+										<button class="annotator__toolbar__button--image-annotator button--tool--bounding-box">bounding box</button>
 										
 										<!-- Toolbar__Buttons--Ploygon -->
-										<button class="annotator__toolbar__button button--tool--ploygon">ploygon</button>
+										<button class="annotator__toolbar__button--image-annotator button--tool--ploygon">ploygon</button>
 										
 										<!-- Toolbar__Buttons--Delete -->
-										<button class="annotator__toolbar__button button--tool--delete">delete</button>
+										<button class="annotator__toolbar__button--image-annotator button--tool--delete">delete</button>
 										
 										<!-- Toolbar__Buttons--Reset -->
-										<button class="annotator__toolbar__button button--tool--reset">reset</button>
+										<button class="annotator__toolbar__button--image-annotator button--tool--reset">reset</button>
 									</div>
 								</article>
 
-								<!-- Image Annotator__Workspace -->
+								<!-- Annotator__Workspace--Image Annotator -->
 								<section class="annotator__workspace--image-annotator size--full">
+									
+									<!-- frame / Annotator__Workspace-Frame--Image Annotator -->
+									<div class="frame annotator__workspace-frame--image-annotator">
+									
+										<!-- frame / Annotator__Workspace--Image-Annotator__SVG-Ovject -->
+										<svg class="annotator__workspace--image-annotator__workspace cross-cursor" 
+										     width="100%" height="100%" 
+										     xmlns="http://www.w3.org/2000/svg" 
+										     version="1.1" 
+										     xmlns:xlink="http://www.w3.org/1999/xlink" 
+										     xmlns:svgjs="http://svgjs.com/svgjs" 
+										     pointer-events="auto">
 
-									<svg class="svg-object size--inherit cross-cursor" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg" version="1.1" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:svgjs="http://svgjs.com/svgjs" pointer-events="auto">
-
-										<g class="image-group" style="">
-											<!-- image -->
-											<image class="target-image" src="test_image.jpg"></image>
-										</g>
-
-										<!-- svg
-										<svg-g class="svg-group root">
-
-
-											<!-- item 
-											<g>
-												<polygon class="polygon selectable pointer item" />
-												<polygon class="dotted-line" />
+											<g class="image-group" style="">
+												<!-- image -->
+												<image class="target-image" src="test_image.jpg"></image>
 											</g>
-										</svg-g>-->
-									</svg>
+
+											<!-- svg
+											<svg-g class="svg-group root">
+
+
+												<!-- item 
+												<g>
+													<polygon class="polygon selectable pointer item" />
+													<polygon class="dotted-line" />
+												</g>
+											</svg-g>-->
+										</svg>
+									</div>
 								</section>
 							</div>
 						</div>
 					
 						<!-- Controller -->
-						<article class="annotator__panel">panel</article>
+						<article class="annotator__panel--image-annotator">panel</article>
 					</div>
 				</div>
 			</main>
