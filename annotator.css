@@ -1,7 +1,7 @@
 @charset "utf-8";
 /* CSS Document */
 
-/* Annotator 0.43 (2021-02-23)
+/* Annotator 0.44 (2021-02-24)
    페이지의 상세한 속성과 값을 설정합니다. */
 
 .tool--root {
@@ -88,7 +88,7 @@
 	background: #373838;
 }
 
-.annotator__toolbar {
+.annotator__toolbar--image-annotator {
 	position: relative;
 	display: flex;
 	
@@ -108,7 +108,7 @@
 	overflow-y: auto;
 }
 
-.annotator__toolbar__buttons {
+.annotator__toolbar__layout-buttons--image-annotator {
 	position: relative;
 	
 	/* Size */
@@ -127,7 +127,7 @@
 	overflow-x: hidden;
 }
 
-.annotator__toolbar__button {
+.annotator__toolbar__button--image-annotator {
 	/* Size */
 	height: 32px;
 	width: 32px;
@@ -145,9 +145,48 @@
 	cursor: pointer;
 }
 
-.annotator__workspace--image-annotator { }
+.annotator__workspace--image-annotator { 
+	position: relative;
+	display: flex;
+	
+	/* Size */
+	box-sizing: border-box;
+	width: 100%;
+	height: 100%;
+	
+	/* Align Item */
+	flex-grow: 1;
+	flex-shrink: 1;
+	flex-basis: 0%;
+	flex-direction: column;
+	
+	user-select: auto;
+}
 
-.annotator__panel {
+.annotator__workspace-frame--image-annotator {
+	position: relative;
+	display: block;
+	
+	/* Size */
+	padding: 0;
+	
+	box-sizing: border-box;
+	
+	height: 100%;
+	
+	/* Align Item */
+	flex-grow: 1;
+	flex-shrink: 1;
+	flex-basis: 0%;
+
+	overflow: hidden;
+
+	-webkit-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
+}
+
+.annotator__panel--image-annotator {
 	display: flex;
 
 	/* Size */
