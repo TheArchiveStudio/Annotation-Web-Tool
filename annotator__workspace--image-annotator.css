@@ -1,7 +1,7 @@
 @charset "utf-8";
 /* CSS Document */
 
-/* ANNOTATOR-SVG 0.3 (2021-02-17) */
+/* ANNOTATOR-SVG 0.31 (2021-02-25) */
 
 /* Image-Annotator__Workspace */
 .annotator__workspace--image-annotator__workspace {
@@ -21,6 +21,23 @@
 .cross-cursor {
 	cursor: url(cursor.svg) 8.5 8.5, crosshair;
 }
+
+/* Image-Annotator__Workspace__ */
+.image-annotator__workspace__target-image-wire {
+	transform: matrix(1, 0, 0, 1, 0, 0);
+	
+	user-select: auto;
+}
+
+.image-annotator__workspace__target-image {
+	
+}
+
+.image-annotator__workspace__annotation--svg-data-wire {
+
+}
+
+.image-annotator__workspace__annotation--svg-data { }
 
 /* POLYGON */
 
