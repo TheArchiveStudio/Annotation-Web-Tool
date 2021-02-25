@@ -1,7 +1,7 @@
 @charset "utf-8";
 /* CSS Document */
 
-/* LAYOUT 0.11
+/* LAYOUT 0.12 (2021-02-25)
    Display & Frame & Gride & Size */
 
 /* Frame  
@@ -9,12 +9,16 @@
 .frame { }
 
 /* Wire 
-   디스플레이 구역을 묶는 틀/ */
+   디스플레이 구역을 묶는 틀. */
 .wire { }
 
 /* Layout 
    디스플레이 구역을 나누는 틀. */
 .layout { }
+
+/* Layer
+   디스플레이 층을 묶는 틀. */
+.layer { }
 
 .display--flex {
 	display: flex;
