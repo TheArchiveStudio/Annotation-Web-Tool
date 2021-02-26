@@ -18,7 +18,7 @@
 }
 
 /* CURSOR */
-.cross-cursor {
+.cursor--cross-cursor {
 	cursor: url(cursor.svg) 8.5 8.5, crosshair;
 }
 
@@ -72,7 +72,19 @@
 	fill: rgb(235, 59, 89);
 
 	stroke: rgb(215, 39, 69);
-	stroke-width: 0.512821;
+	stroke-width: 1.3333333333333333;
+
+	style="user-select: auto;
+}
+
+.polygon--selected:hover {
+	fill-opacity: 0.4;
+
+	transition: fill-opacity .3s;
+	transition-property: fill-opacity;
+	transition-duration: 0.3s;
+	transition-timing-function: ease;
+	transition-delay: 0s;
 }
 
 /* Unselected Polygon
@@ -84,6 +96,16 @@
 	stroke-dasharray: 2.5641, 1.02564;
 	stroke: rgb(215, 39, 69);
 	stroke-width: 0.512821;
+}
+
+.polygon--unselected:hover {
+	fill-opacity: 0.3;
+
+	transition: fill-opacity .3s;
+	transition-property: fill-opacity;
+	transition-duration: 0.3s;
+	transition-timing-function: ease;
+	transition-delay: 0s;
 }
 
 /* BOUNDING-RECT */
@@ -218,15 +240,13 @@
 .center-circle--selected { }
 
 /* CONTROL POINT */
+.control-point-frame--selected { }
 
-.control-point { }
+.control-point-frame--unselected { }
 
 /* Control-Point Selection Area
    컨트롤 포인트의 선택 영역. */
 .control-point__selection-area {
-	cx: 0;
-	cy: 0;
-
 	r: 6;
 
 	opacity: 0;
@@ -235,9 +255,6 @@
 /* Unselect Control-Point
    선택하지 않은 컨트롤 포인트. */
 .control-point--unselected {
-	cx: 0;
-	cy: 0;
-
 	r: 2.5;
 
 	fill: rgb(0, 0, 0);
@@ -249,9 +266,6 @@
 /* Select Control-Point
   선택한 컨트롤 포인트. */
 .control-point--selected {
-	cx: 0;
-	cy: 0;
-
 	r: 3;
 
 	fill: rgb(168, 220, 86);
