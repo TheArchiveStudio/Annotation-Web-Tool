@@ -107,6 +107,21 @@
 										     xmlns:svgjs="http://svgjs.com/svgjs" 
 										     pointer-events="auto">											
 											
+											<!-- Definition -->
+											<difs>
+												<!-- Control-Point--Selected -->
+												<g class="control-point-frame--selected" id="control-point--selected">
+													<circle class="control-point__selection-area" />
+													<circle class="control-point--selected" />
+												</g>
+												
+												<!-- Control-Point--Unselected -->
+												<g class="control-point-frame--unselected" id="control-point--unselected">
+													<circle class="control-point__selection-area" />
+													<circle class="control-point--unselected" />
+												</g>
+											</difs>
+											
 											<!-- layer / Image-Annotator__Workspace__Target-Image-Wire -->
 											<g class="layer image-annotator__workspace__target-image-wire">
 												
@@ -118,18 +133,12 @@
 											<g class="layer image-annotator__workspace__annotation--svg-data-wire">
 												
 												<!-- layer / Image-Annotator__Workspace__Annotation--SVG-Datas -->
-												
-												<circle class="control-point__selection-area" cx="100" cy="100" />
-												<circle class="control-point--selected" cx="100" cy="100" />
-												
-												<circle class="control-point__selection-area" cx="200" cy="100" />
-												<circle class="control-point--unselected" cx="200" cy="100" />
-												
-												<circle class="control-point__selection-area" cx="150" cy="200" />
-												<circle class="control-point--unselected" cx="150" cy="200" />
-												
-												<circle class="control-point__selection-area" cx="250" cy="200" />
-												<circle class="control-point--unselected" cx="250" cy="200" />
+												<polygon class="item polygon selectable polygon--selected cursor--cross-cursor" 
+													 points="100,100 200,100 250,200 150,200"></polygon>
+												<use xlink:href="#control-point--selected" x="100" y="100" />
+												<use xlink:href="#control-point--unselected" x="200" y="100" />
+												<use xlink:href="#control-point--unselected" x="150" y="200" />
+												<use xlink:href="#control-point--unselected" x="250" y="200" />
 											</g>
 										</svg>
 									</div>
