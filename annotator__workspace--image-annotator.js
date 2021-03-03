@@ -33,21 +33,21 @@ var CoordinatePlane = function () {
 	
 	// geter seter Y
 	
-	function getY = function () {
+	this.getY = function () {
 		return this.y;
 	};
 	
-	function setY = function (y) { 
+	this.setY = function (y) { 
 		this.y = y;
 	};
 	
 	// geter seter XY
 	
-	function getXy = function () {
+	this.getXy = function () {
 		return [this.x, this.y];
 	};
 	
-	function setXy (x, y) {
+	this.setXy = function (x, y) {
 		this.x = x;
 		this.y = y;
 	};
@@ -59,43 +59,43 @@ var CoordinateSpace = CoordinatePlane () {
 	
 	this.z = 0;
 	
-	function getZ = function () {
+	this.getZ = function () {
 		return this.z;
 	};
 	
-	function setZ = function (y) { 
+	this.setZ = function (y) { 
 		this.z = z;
 	};
 	
 	// geter seter XZ
 	
-	function getXz = function () {
+	this.getXz = function () {
 		return [this.x, this.z];
 	};
 	
-	function setXz (x, z) {
+	this.setXz = function (x, z) {
 		this.x = x;
 		this.z = z;
 	};
 	
 	// geter seter YZ
 	
-	function getYz = function () {
+	this.getYz = function () {
 		return [this.y, this.z];
 	};
 	
-	function setYz (y, z) {
+	this.setYz = function (y, z) {
 		this.y = y;
 		this.z = z;
 	};
 	
 	// geter seter YZ
 	
-	function getXyz = function () {
+	this.getXyz = function () {
 		return [this.x, this.y, this.z];
 	};
 	
-	function setXyz (x, y, z) {
+	this.setXyz = function (x, y, z) {
 		this.x = x;
 		this.y = y;
 		this.z = z;
