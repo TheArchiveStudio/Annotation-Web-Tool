@@ -88,6 +88,10 @@
 	background: #373838;
 }
 
+.annotator__toolbar--image-annotator__selected-tool {
+	display: none;
+}
+
 .annotator__toolbar--image-annotator {
 	position: relative;
 	display: flex;
