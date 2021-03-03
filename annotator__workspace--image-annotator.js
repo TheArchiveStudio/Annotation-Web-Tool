@@ -89,7 +89,7 @@ var CoordinateSpace = CoordinatePlane () {
 		this.z = z;
 	};
 	
-	// geter seter YZ
+	// geter seter XYZ
 	
 	this.getXyz = function () {
 		return [this.x, this.y, this.z];
