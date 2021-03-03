@@ -1,6 +1,6 @@
 // JavaScript Document
 
-/* ANNOTATOR__WORKSPACE--iMAGE-ANNOTATOR 0.32 (2021-03-02) */
+/* ANNOTATOR__WORKSPACE--iMAGE-ANNOTATOR 0.32 (2021-03-03) */
 
 window.onload = function() {
 	var imageAannotatorWorkspace = document.getElementById("image-annotator__workspace");
@@ -12,20 +12,47 @@ window.onload = function() {
 	}
 }
 
-function CoordinatePlane () {
-	var x;
-	var y;
+// COORDINATE SYSTEM
+// Coordinate Plane System
+
+var CoordinatePlane = function () {
+	this.x = 0;
+	this.y = 0;
 	
 	// geter seter X
-	function setX ();
-	function getX ();
+	
+	this.getX = function () {
+		return this.x;
+	};
+	
+	this.setX = function (value) { 
+		this.x = value;
+	};
+	
 	// geter seter Y
-	function getY ();
-	function setY ();
+	
+	function getY = function () {
+		return this.y;
+	};
+	
+	function setY = function (value) { 
+		this.y = value;
+	};
+	
 	// geter seter XY
-	function getXy ();
-	function setXy ();
-}
+	
+	function getXy = function () {
+		return [this.x, this.y];
+	};
+	function setXy (xValue, yValue) {
+		this.x = xValue;
+		this.y = yVlaue;
+	};
+};
+
+// (*Undefined) Coordinate Space System
+
+
 
 // Item
 
