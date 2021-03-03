@@ -1,6 +1,8 @@
 // JavaScript Document
 
-/* ANNOTATOR__WORKSPACE--iMAGE-ANNOTATOR 0.32 (2021-03-03-18-33) */
+// ANNOTATOR__WORKSPACE--iMAGE-ANNOTATOR
+// Version : 0.32
+// Update Date : 2021-03-03-18-33
 
 window.onload = function() {
 	var imageAannotatorWorkspace = document.getElementById("image-annotator__workspace");
@@ -12,9 +14,11 @@ window.onload = function() {
 	}
 }
 
-// ◆ COORDINATE SYSTEM
+// COORDINATE SYSTEM
+// Version : 0.1
+// Update Date : 2021-03-03-18-33
 
-// ◇ Coordinate Plane System
+// Coordinate Plane
 
 var CoordinatePlane = function () {
 	
@@ -53,7 +57,7 @@ var CoordinatePlane = function () {
 	};
 };
 
-// ◇ Coordinate Space System
+// Coordinate Space
 
 var CoordinateSpace = CoordinatePlane () {
 	
