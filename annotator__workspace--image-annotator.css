@@ -1,7 +1,7 @@
 @charset "utf-8";
 /* CSS Document */
 
-/* ANNOTATOR-SVG 0.31 (2021-02-25) */
+/* ANNOTATOR-SVG 0.31 (2021-02-29) */
 
 /* Image-Annotator__Workspace */
 .annotator__workspace--image-annotator__workspace {
@@ -39,6 +39,12 @@
 
 .image-annotator__workspace__annotation--svg-data { }
 
+.annotation--svg-data-item-wire {
+    opacity: 1;
+	
+	pointer-events: auto;
+}
+
 /* POLYGON */
 
 .polygon { }
@@ -74,7 +80,7 @@
 	stroke: rgb(215, 39, 69);
 	stroke-width: 1.3333333333333333;
 
-	style="user-select: auto;
+	user-select: auto;
 }
 
 .polygon--selected:hover {
@@ -110,11 +116,11 @@
 
 /* BOUNDING-RECT */
 
-.bounding-rect { }
+.polygon-bounding-rect { }
 
 /* Drawing Bounding-Rect
    사각형을 그릴 때 시작점과 마우스 커서 사이를 잇는 가상의 영역에 색과 테두리. */
-.bounding-rect--drawing {
+.polygon-bounding-rect--drawing {
 	fill-opacity: 0;
 	fill: rgb(235, 59, 89);
 
@@ -125,7 +131,7 @@
 
 /* Drew Bounding-Rect 
    사각형을 그릴 때 시작점과 마우스 커서 사이를 잇는 영역에 색과 테두리.  */
-.bounding-rect--drew {
+.polygon-bounding-rect--drew {
 	fill-opacity: 0.1;
 	fill: rgb(235, 59, 89);
 
@@ -135,22 +141,41 @@
 
 /* Selected Bounding-Rect
    사각형을 선택하였을때 영역의 색과 빈 테두리. */
-.bounding-rect--selected {
-	fill-opacity: 0.7;
-	fill: rgb(235, 59, 89);
+.polygon-bounding-rect--selected {
+	fill-opacity: 0.1;
+	fill: rgb(251, 242, 232);
+	
+	stroke: rgb(231, 222, 212);
+	stroke-width: 1.33333;
 
 	user-select: auto;
 }
 
+.polygon-bounding-rect--selected:hover {
+	fill-opacity: 0.4;
+
+	transition: fill-opacity .3s;
+	transition-property: fill-opacity;
+	transition-duration: 0.3s;
+	transition-timing-function: ease;
+	transition-delay: 0s;
+}
+
 /* Unselected Bounding-Rect
    사각형을 선택하지 않았을때 영역의 색과 테두리. */
-.bounding-rect--unselected {
+.polygon-bounding-rect--unselected {
 	fill-opacity: 0;
-	fill: rgb(235, 59, 89);
+	fill: rgb(251, 242, 232);
 
-	stroke-dasharray: 4.16667, 1.66667;
-	stroke-width: 0.833333;
-	stroke: rgb(215, 39, 69);
+	stroke-dasharray: 6.66667, 2.66667;
+	stroke-width: 1.33333;
+	stroke: rgb(231, 222, 212);
+}
+
+.polygon-bounding-rect--unselected:hover {
+	fill-opacity: 0.3;
+	
+	transition: fill-opacity .3s;
 }
 
 /* EXTREME-RECT */
@@ -272,4 +297,8 @@
 
 	stroke: rgb(255, 255, 255);
 	stroke-width: 1;
+}
+
+.image-annotator__annotation-data-form {
+	display: none;
 }
