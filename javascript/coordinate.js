@@ -2,6 +2,7 @@
 
 // COORDINATE
 // Comment : 기본 좌표 객체.
+// Full Directory : javascript
 // Version : 0.1
 // Update Date : 2021-03-03-18-33
 
