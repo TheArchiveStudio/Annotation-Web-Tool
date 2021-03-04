@@ -1,7 +1,11 @@
 @charset "utf-8";
 /* CSS Document */
 
-/* DEVELOPER MODE (2021-02-26-18-25) */
+/* DEVELOPER MODE
+   Comment : 개발 과정의 화면에서 모든 객체에 점선 테두리를 표시합니다.
+   Directory : css
+   Version : 0.1
+   Last Update : 2021-02-26-18-25 */
 
 * {
 	border: dotted 1px #ACACAC;
