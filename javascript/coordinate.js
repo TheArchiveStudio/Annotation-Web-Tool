@@ -47,7 +47,9 @@ var CoordinatePlane = function () {
 
 // Coordinate Space
 
-var CoordinateSpace = CoordinatePlane () {
+var CoordinateSpace = function () {
+	
+ 	this = CoordinatePlane;
 	
 	this.z = 0;
 	
