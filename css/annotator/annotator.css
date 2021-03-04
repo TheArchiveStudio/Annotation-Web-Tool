@@ -1,8 +1,11 @@
 @charset "utf-8";
 /* CSS Document */
 
-/* Annotator 0.44 (2021-02-24)
-   페이지의 상세한 속성과 값을 설정합니다. */
+/* ANNOTATOR
+   Comment : 페이지의 상세한 속성과 값을 설정합니다.
+   Directory : css \ annotator
+   Version : 0.44
+   Last Update : 2021-02-24 */
 
 .tool--root {
 	position: inherit;
