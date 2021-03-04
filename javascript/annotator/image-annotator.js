@@ -1,7 +1,7 @@
 // JavaScript Document
 
 // iMAGE-ANNOTATOR
-// Directory : ANNOTATOR \ WORKSPACE
+// Full Directory : javascript \ annotator \ workspace \ image-annotator
 // Version : 0.33
 // Update Date : 2021-03-03-18-33
 
