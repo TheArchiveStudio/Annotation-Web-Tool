@@ -5,6 +5,8 @@
 // Version : 0.33
 // Update Date : 2021-03-03-18-33
 
+var coordinatePlane = new CoordinatePlane();
+
 window.onload = function() {
 	var imageAannotatorWorkspace = document.getElementById("image-annotator__workspace");
 	var imageAannotatorWorkspaceTargetImage = document.getElementById("image-annotator__workspace__target-image");
@@ -13,6 +15,8 @@ window.onload = function() {
 		cursorX = imageAannotatorWorkspaceTargetImage.offsetX;
 		cursorY = imageAannotatorWorkspaceTargetImage.offsetY;
 	}
+	
+	
 }
 
 // Item
@@ -20,6 +24,38 @@ window.onload = function() {
 function insertItem () { }
 
 function displayItem () { }
+
+// Set-Controll-Point__Xy
+
+setDocumentElementControllPointXy (x, y) {
+	
+}
+
+// Create-Controll-Point
+createDocumentElementControllPoint () {
+	var element = document.createElement("use");
+	element.
+}
+
+// Append-Controll-Point
+appendDocumentElementControllPoint () {
+	//-target-.appendChild();
+}
+
+// Dispaly-Controll-Point
+dispalyDocumentElementControllPoint () {
+
+}
+
+hideDocumentElementControllPoint () {
+
+}
+
+// Delete-Document-Element__Controll-Point
+deleteDocumentElementControllPoint () {
+
+}
+
 
 function modifyItem () { }
 
