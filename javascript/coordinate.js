@@ -2,96 +2,99 @@
 
 // COORDINATE
 // Comment : 기본 좌표 객체.
-// Full Directory : javascript
-// Version : 0.1
-// Update Date : 2021-03-03-18-33
+// Full Directory : javascript / 
+// Version : 0.2
+// Update Date : 2021-03-05-16-25
 
 // Coordinate Plane
 
-var CoordinatePlane = function () {
+class CoordinatePlane {
 	
-	this.x = 0;
-	this.y = 0;
+	constructor (x, y) {
+		this.x = x || 0;
+		this.y = y || 0;
+	}
 	
 	// geter seter X
 	
-	this.getX = function () {
+	getX () {
 		return this.x;
-	};
+	}
 	
-	this.setX = function (x) { 
+	setX (x) { 
 		this.x = x;
-	};
+	}
 	
 	// geter seter Y
 	
-	this.getY = function () {
+	getY () {
 		return this.y;
-	};
+	}
 	
-	this.setY = function (y) { 
+	setY (y) { 
 		this.y = y;
-	};
+	}
 	
 	// geter seter XY
 	
-	this.getXy = function () {
+	getXy () {
 		return [this.x, this.y];
-	};
+	}
 	
-	this.setXy = function (x, y) {
+	setXy (x, y) {
 		this.x = x;
 		this.y = y;
-	};
-};
+	}
+}
 
 // Coordinate Space
 
-var CoordinateSpace = function () {
+class CoordinateSpace extends CoordinatePlane {
 	
- 	this = CoordinatePlane;
+	constructor (x, y, z) {
+		super(x);
+		this.z = z || 0;
+	}
 	
-	this.z = 0;
-	
-	this.getZ = function () {
+	getZ () {
 		return this.z;
-	};
+	}
 	
-	this.setZ = function (y) { 
+	setZ (y) { 
 		this.z = z;
-	};
+	}
 	
 	// geter seter XZ
 	
-	this.getXz = function () {
+	getXz () {
 		return [this.x, this.z];
-	};
+	}
 	
-	this.setXz = function (x, z) {
+	setXz (x, z) {
 		this.x = x;
 		this.z = z;
-	};
+	}
 	
 	// geter seter YZ
 	
-	this.getYz = function () {
+	getYz () {
 		return [this.y, this.z];
-	};
+	}
 	
-	this.setYz = function (y, z) {
+	setYz (y, z) {
 		this.y = y;
 		this.z = z;
-	};
+	}
 	
 	// geter seter XYZ
 	
-	this.getXyz = function () {
+	getXyz () {
 		return [this.x, this.y, this.z];
-	};
+	}
 	
-	this.setXyz = function (x, y, z) {
+	setXyz (x, y, z) {
 		this.x = x;
 		this.y = y;
 		this.z = z;
-	};
+	}
 }
