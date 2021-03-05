@@ -52,7 +52,7 @@ class CoordinatePlane {
 class CoordinateSpace extends CoordinatePlane {
 	
 	constructor (x, y, z) {
-		super(x);
+		super(x, y);
 		this.z = z || 0;
 	}
 	
