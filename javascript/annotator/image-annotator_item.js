@@ -2,8 +2,8 @@
 
 // iMAGE-ANNOTATOR_ITEM
 // Full Directory : javascript \ annotator \ workspace \ image-annotator
-// Version : 0.33
-// Update Date : 2021-03-03-18-33
+// Version : 0.1
+// Update Date : 2021-03-03-18-37
 
 
 /* ITEM
@@ -98,8 +98,35 @@ class imageAnnotationItem {
 	}
 }
 
+class HtmlElementimageAnnotationItem {
+	
+	insertElement
+	
+	displayElement
+	
+	property
+	
+	hiddenElement
+	
+	deleteElement
+	
+	
+}
 
+class HtmlController {
+	
+	// 부모
+	// 형제
+	// 이전 형제
+	// 다음 형제
+	// 첫번재 형제
+	// 마지막 형제
+}
 
 function insertImageAnnotation_Item () { }
 
-function displayDocumentElementImageAnnotation_Item () { }
+function 
+
+display
+
+hDocumentElementImageAnnotation_Item () { }
