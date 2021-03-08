@@ -2,8 +2,8 @@
 
 // iMAGE-ANNOTATOR
 // Full Directory : javascript \ annotator \ workspace \ image-annotator
-// Version : 0.33
-// Update Date : 2021-03-03-18-33
+// Version : 0.34
+// Update Date : 2021-03-08-11-29
 
 var coordinatePlane = new CoordinatePlane();
 
