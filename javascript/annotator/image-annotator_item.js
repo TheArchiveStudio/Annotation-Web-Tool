@@ -100,33 +100,18 @@ class imageAnnotationItem {
 
 class HtmlElementimageAnnotationItem {
 	
-	insertElement
+	insert () {
+	}
 	
-	displayElement
+	display () {
+	}
 	
-	property
+	property () {
+	}
 	
-	hiddenElement
+	hidden () {
+	}
 	
-	deleteElement
-	
-	
+	delet () {
+	}
 }
-
-class HtmlController {
-	
-	// 부모
-	// 형제
-	// 이전 형제
-	// 다음 형제
-	// 첫번재 형제
-	// 마지막 형제
-}
-
-function insertImageAnnotation_Item () { }
-
-function 
-
-display
-
-hDocumentElementImageAnnotation_Item () { }
