@@ -16,30 +16,44 @@ window.onload = function() {
 		cursorY = imageAannotatorWorkspaceTargetImage.offsetY;
 	}
 	
+	// Image Annotation Item List
+	var imageAnnotationItemList = new imageAnnotationItemList();
+	// + if Image Annotation Item List is Not Empty
+	
 	
 }
 
-// Item
+/* POINT
+ * 1. Image Annotation Item Shape Point List : 한 아이템의 포인트 목록
+ */
 
-function insertItem () { }
-
-function displayItem () { }
+// Image Annotation Item Shape Point List : 한 아이템의 포인트 목록
+class imageAnnotationItemShapePointList {
+	
+	construct (item_id) {
+		
+		this.item_id = item_id;
+		this.PointList = new List();
+	}
+}
 
 // Set-Controll-Point__Xy
 
-setDocumentElementControllPointXy (x, y) {
-	
+setDocumentElementControllPointXy (element, x, y) {
+	element.setAttribute("x", );
+	element.setAttribute("y", );
 }
 
 // Create-Controll-Point
 createDocumentElementControllPoint () {
 	var element = document.createElement("use");
-	element.
+	element.setAttribute("id", );
+	element.setAttribute("class", );1
 }
 
 // Append-Controll-Point
-appendDocumentElementControllPoint () {
-	//-target-.appendChild();
+appendDocumentElementControllPoint (id) {
+	id.appendChild();
 }
 
 // Dispaly-Controll-Point
@@ -80,5 +94,3 @@ function displayPoint () { }
 function modifyPoint () { }
 
 function deletePoint () { }
-
-//
