@@ -3,7 +3,7 @@
 // HTML ELEMENT
 // Comment : HTML 요소.
 // Version : 0.1
-// Last Update Date : 2021-03-09-20-13
+// Last Update Date : 2021-03-10-01-19
 // Reference : https://developer.mozilla.org/ko/docs/Web/API/Element
 
 // Element
@@ -11,7 +11,7 @@ class HtmlElement {
 	
 	// Create Element
 	// Commnet : 요소를 생성합니다.
-	// document.createElement("");
+	// Replacement Standard Function : document.createElement("");
 	create (tagName_value) {
 		return document.createElement(tagName_value);
 	}
@@ -50,54 +50,57 @@ class HtmlElementNode {
 	
 	constructor (element) {
 		
+		// Element 요소
 		this.element = element;
-		this.parentNode; // Parent Node 부모 노드.
-		this.hasChildNode; // leafNode 자식이 없는 노드 / branchNode 자식이 있는 노드
-		this.childNodeList; // Child Node 자식 노드 목록.
-		this.degree_value; // 자식 노드의 수.
-		this.leafNode_state; // 자식이 없는 노드.
-		this.branchNode_state; // 차수가 0 이 아닌 노드. 즉, 자식이 있는 노드.
-		
-		this.lastSiblingNode; // 마지막 형제.
-	}
-	
-	// Parent Node 부모 노드
-	
-	// Sibling Node 형제 노드
-	
-	// 이전 형제
-	
-	// 다음 형제
-	
-	// 첫번재 형제
-	
-	// 마지막 형제
-	
+		// Parent Node : 부모 노드.
+		this.parentNode;
+		// 앞 부모 노드
+		this.frontParentNode;
+		// 뒤 부모 노드
+		this.backParentNode;
+		// Sibling Node List : 형제 노드 목록
+		this.siblingNodeList;
+		// 앞 형제 노드
+		this.frontSiblingNode;
+		// 뒤 형제 노드
+		this.backSiblingNode;
+		// 첫번째 형제 노드.
+		this.firstSiblingNode;
+		// 마지막 형제 노드.
+		this.lastSiblingNode; 
+		// Degree 차수 : 자식 노드의 수. ( 0 : leafNode 자식이 없는 노드. / 0^ : branchNode 자식이 있는 노드. )
+		this.degree_value;
+		// Child Node 자식 노드 목록.
+		this.childNodeList;
+	}	
 }
 
 // Attribute
 class HtmlElementAttribute {
 	
 	// Set Attribute
+	// Commnet : 해당 요소에 지정된 이름의 속성과 값을 설정합니다.
 	// Replacement Standard Function : element.setAttribute(name, value)
 	set (element, name, value) {
 		return element.setAttribute(name, value);
 	}
 	
 	// Get Attribute 
-	// Comment : 해당 요소에 지정된 값을 반환 합니다. 만약 주어진 속성이 존재 하지 않는 다면, null 값이나 ""(빈문자열); 을 반환 할 것입니다.
+	// Comment : 해당 요소에 지정된 이름의 속성에 값을 반환 합니다. 만약 주어진 속성이 존재 하지 않는 다면, null 값 혹은 ""(빈문자열) 값을 반환 할 것입니다.
 	// Replacement Standard Function : element.getAttribute(name)
 	get (element, name) {
 		return element.getAttribute(name);
 	}
 	
 	// Has Attribute
+	// Commnet : 해당 요소에 지정된 이름의 속성이 존재하는지 확인합니다.
 	// Replacement Standard Function : element.hasAttribute(name)
 	has (element, name) {
 		return element.hasAttribute(name);
 	}
 	
 	// Remove Attribute
+	// Commnet : 해당 요소에 지정된 이름의 속성을 삭제합니다.
 	// Replacement Standard Function : element.removeAttribute(name)
 	remove (element, name) {
 		return element.removeAttribute(name);
