@@ -40,15 +40,20 @@ class HtmlElement {
 	}
 }
 
-// Node
+// (*Undefined) Node
 class HtmlElementNode {
 	
 	constructor (element) {
 		
 		this.element = element;
+		this.parentNode; // Parent Node 부모 노드.
+		this.hasChildNode; // leafNode 자식이 없는 노드 / branchNode 자식이 있는 노드
+		this.childNodeList; // Child Node 자식 노드 목록.
 		this.degree_value; // 자식 노드의 수.
 		this.leafNode_state; // 자식이 없는 노드.
 		this.branchNode_state; // 차수가 0 이 아닌 노드. 즉, 자식이 있는 노드.
+		
+		this.lastSiblingNode; // 마지막 형제.
 	}
 	
 	// Parent Node 부모 노드
