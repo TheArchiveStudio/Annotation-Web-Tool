@@ -77,6 +77,20 @@ function deleteItem () { }
 
 // Ploygon
 
+// 폴리곤 바운딩 박스
+class polygonBoundingBox {
+	
+	constructor () {
+		this.htmlElement = new HtmlElement();
+		this.htmlElementAttribute = HtmlElementAttribute();
+		this.htmlStyle = HtmlStyle();
+	}	
+	
+	createHTMLSVGElement () {
+		var htmlSVGElement = htmlElement.create("");
+	}
+}
+
 function insertPolygon () { }
 
 function displayPloygon () { }
