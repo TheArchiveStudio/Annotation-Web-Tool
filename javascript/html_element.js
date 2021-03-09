@@ -4,9 +4,15 @@ class HtmlElement {
 	
 	// Create Element
 	// document.createElement("");
+	create (tagName_value) {
+		return document.createElement(tagName_value);
+	}
 	
 	// Create Text Node
 	// createTextNode() : 텍스트 노드를 생성
+	createTextNode (text_value) {
+		return document.createTextNode(text_value);
+	}
 	
 	// Insert Element
 	// appendChild() : 요소 A.appendChild(child)일 때 child 요소의 '요소A'의 자식 요소로 만들어 줌
@@ -43,6 +49,7 @@ class HtmlElementAttribute {
 		element.style.display = element.getAttribute(display) || "";
 	}
 	
+	// Hidden Element
 	hidden (element) {
 		element.setAttribute("display", element.style.display);
 		element.style.display = "hidden";
