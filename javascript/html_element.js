@@ -1,5 +1,9 @@
-//
+// JavaScript Document
 
+// HTML ELEMENT
+// Comment : HTML 요소.
+// Version : 0.1
+// Last Update Date : 2021-03-09-20-13
 // Reference : https://developer.mozilla.org/ko/docs/Web/API/Element
 
 // Element
