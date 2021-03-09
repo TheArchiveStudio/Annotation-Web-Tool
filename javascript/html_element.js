@@ -1,33 +1,29 @@
+
+// Element
 class HtmlElement {
 	
 	// Create Element
 	// document.createElement("");
 	
+	// Create Text Node
+	// createTextNode() : 텍스트 노드를 생성
+	
 	// Insert Element
-	insertElement () {
-	}
-	
-	// Display Element
-	displayElement () {
-	}
-	
-	property () {
-	}
-	
-	hiddenElement () {
-	}
+	// appendChild() : 요소 A.appendChild(child)일 때 child 요소의 '요소A'의 자식 요소로 만들어 줌
+	// innerHTML = ""; : 문자 방식으로 요소를 생성.
 	
 	deleteElement () {
 	}
 }
 
+// Node
 class HtmlElementNode {
 
-	this.degree = 0; // 자식의 수
+	this.degree_value = 0; // 자식의 수
 
 	
-	// Parent Node 부모 
-	// Sibling Node 형제
+	// Parent Node 부모 노드
+	// Sibling Node 형제 노드
 	// 이전 형제
 	// 다음 형제
 	// 첫번재 형제
@@ -37,9 +33,28 @@ class HtmlElementNode {
 	// internal | branch node 차수가 0이 아닌 노드. 즉, 자식이 있는 노드.
 }
 
+// Attribute
 class HtmlElementAttribute {
 	
 	// Reference : https://developer.mozilla.org/ko/docs/Web/API/Element
+	
+	// Display Element
+	display (element) {
+		
+		if (element.hasAttribute("display")) {
+			element.style.display = element.getAttribute(display);
+    		} else {
+		
+		}
+		element.setAttribute("hidden", "none");
+	}
+	
+	hidden (element) {
+		element.setAttribute("display", element.style.display);
+		
+		element.style.display = "hidden";
+		element.setAttribute("hidden", "exist");
+	}
 	
 	// Set Attribute
 	// Replacement Function : element.setAttribute(name, value)
