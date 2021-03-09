@@ -10,30 +10,35 @@
 class HtmlElement {
 	
 	// Create Element
+	// Commnet : 요소를 생성합니다.
 	// document.createElement("");
 	create (tagName_value) {
 		return document.createElement(tagName_value);
 	}
 	
 	// Create Text Node
-	// Replacement Standard Function : createTextNode() : 텍스트 노드를 생성
+	// Commnet : 텍스트 노드를 생성합니다.
+	// Replacement Standard Function : document.createTextNode("text_value");
 	createTextNode (text_value) {
 		return document.createTextNode(text_value);
 	}
 	
 	// Insert Element
+	// Commnet : 자식 요소를 추가합니다.
 	// Replacement Standard Function : parentNode.appendChild(childNode);
 	appendChild (parentNode, childNode) {
 		return parentNode.appendChild(childNode);
 	}
 	
-	// innerHTML = ""; : 문자 방식으로 요소를 생성.
+	// Inner HTML
+	// Comment : 문자 방식으로 요소를 추가합니다.
 	// Replacement Standard Function : parentNode.innerHTML = "html_value";
 	innerHTML (parentNode, html_value) {
 		return parentNode.innerHTML = html_value;
 	}
 	
 	// Remove Child
+	// Commnet : 참조한 자식 요소를 삭제합니다.
 	// Replacement Standard Function : parentNode.removeChild(childNode)
 	removeChild (parentNode, childNode) {
 		return parentNode.removeChild(childNode);
