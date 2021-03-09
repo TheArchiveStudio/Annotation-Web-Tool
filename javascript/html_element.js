@@ -39,26 +39,29 @@ class HtmlElementNode {
 
 class HtmlElementAttribute {
 	
+	// Reference : https://developer.mozilla.org/ko/docs/Web/API/Element
+	
 	// Set Attribute
-	// element.setAttribute(name, value)
+	// Replacement Function : element.setAttribute(name, value)
 	set (element, name, value) {
 		return element.setAttribute(name, value);
 	}
 	
-	// Get Attribute
-	// element.getAttribute(name)
+	// Get Attribute 
+	// Comment : 해당 요소에 지정된 값을 반환 합니다. 만약 주어진 속성이 존재 하지 않는 다면, null 값이나 ""(빈문자열); 을 반환 할 것입니다.
+	// Replacement Function : element.getAttribute(name)
 	get (element, name) {
 		return element.getAttribute(name);
 	}
 	
 	// Has Attribute
-	// element.hasAttribute(name)
+	// Replacement Function : element.hasAttribute(name)
 	has (element, name) {
 		return element.hasAttribute(name);
 	}
 	
 	// Remove Attribute
-	// element.removeAttribute(name)
+	// Replacement Function : element.removeAttribute(name)
 	remove (element, name) {
 		return element.removeAttribute(name);
 	}
