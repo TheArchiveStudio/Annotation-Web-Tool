@@ -107,14 +107,17 @@ class HtmlElementAttribute {
 	}
 }
 
+// CSS
 class HtmlStyle {
 	
 	// Display Element
+	// Commnet : 지정된 요소를 문서에 표기합니다.
 	display (element) {
 		element.style.display = element.getAttribute(display) || "";
 	}
 	
 	// Hidden Element
+	// Commnet : 지정된 요소를 문서에 표기하지 않습니다. (기존 style의 display 속성 값을 display 이름의 Attribute 값으로 저장합니다.)
 	hidden (element) {
 		element.setAttribute("display", element.style.display);
 		element.style.display = "hidden";
