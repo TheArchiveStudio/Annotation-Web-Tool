@@ -80,30 +80,30 @@ class HtmlElementAttribute {
 	
 	// Set Attribute
 	// Commnet : 해당 요소에 지정된 이름의 속성과 값을 설정합니다.
-	// Replacement Standard Function : element.setAttribute(name, value)
-	set (element, name, value) {
-		return element.setAttribute(name, value);
+	// Replacement Standard Function : element.setAttribute(name_value, value)
+	set (element, name_value, attribute_value) {
+		return element.setAttribute(name_value, attribute_value);
 	}
 	
 	// Get Attribute 
 	// Comment : 해당 요소에 지정된 이름의 속성에 값을 반환 합니다. 만약 주어진 속성이 존재 하지 않는 다면, null 값 혹은 ""(빈문자열) 값을 반환 할 것입니다.
-	// Replacement Standard Function : element.getAttribute(name)
-	get (element, name) {
-		return element.getAttribute(name);
+	// Replacement Standard Function : element.getAttribute(name_value)
+	get (element, name_value) {
+		return element.getAttribute(name_value);
 	}
 	
 	// Has Attribute
 	// Commnet : 해당 요소에 지정된 이름의 속성이 존재하는지 확인합니다.
-	// Replacement Standard Function : element.hasAttribute(name)
-	has (element, name) {
-		return element.hasAttribute(name);
+	// Replacement Standard Function : element.hasAttribute(name_value)
+	has (element, name_value) {
+		return element.hasAttribute(name_value);
 	}
 	
 	// Remove Attribute
 	// Commnet : 해당 요소에 지정된 이름의 속성을 삭제합니다.
-	// Replacement Standard Function : element.removeAttribute(name)
-	remove (element, name) {
-		return element.removeAttribute(name);
+	// Replacement Standard Function : element.removeAttribute(name_value)
+	remove (element, name_value) {
+		return element.removeAttribute(name_value);
 	}
 }
 
