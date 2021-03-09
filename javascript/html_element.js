@@ -16,9 +16,17 @@ class HtmlElement {
 	
 	// Insert Element
 	// appendChild() : 요소 A.appendChild(child)일 때 child 요소의 '요소A'의 자식 요소로 만들어 줌
-	// innerHTML = ""; : 문자 방식으로 요소를 생성.
+	appendChild (parentNode, childNode) {
+		return parentNode.appendChild(childNode);
+	}
 	
-	deleteElement () {
+	// innerHTML = ""; : 문자 방식으로 요소를 생성.
+	innerHTML (parentNode, html_value) {
+		return parentNode.innerHTML = html_value;
+	}
+	
+	removeChild (parentNode, childNode) {
+		parentNode.removeChild(childNode);
 	}
 }
 
