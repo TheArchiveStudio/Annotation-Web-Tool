@@ -40,20 +40,12 @@ class HtmlElementAttribute {
 	
 	// Display Element
 	display (element) {
-		
-		if (element.hasAttribute("display")) {
-			element.style.display = element.getAttribute(display);
-    		} else {
-		
-		}
-		element.setAttribute("hidden", "none");
+		element.style.display = element.getAttribute(display) || "";
 	}
 	
 	hidden (element) {
 		element.setAttribute("display", element.style.display);
-		
 		element.style.display = "hidden";
-		element.setAttribute("hidden", "exist");
 	}
 	
 	// Set Attribute
