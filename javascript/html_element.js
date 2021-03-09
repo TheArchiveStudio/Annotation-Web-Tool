@@ -9,22 +9,25 @@ class HtmlElement {
 	}
 	
 	// Create Text Node
-	// createTextNode() : 텍스트 노드를 생성
+	// Replacement Function : createTextNode() : 텍스트 노드를 생성
 	createTextNode (text_value) {
 		return document.createTextNode(text_value);
 	}
 	
 	// Insert Element
-	// appendChild() : 요소 A.appendChild(child)일 때 child 요소의 '요소A'의 자식 요소로 만들어 줌
+	// Replacement Function : parentNode.appendChild(childNode)
 	appendChild (parentNode, childNode) {
 		return parentNode.appendChild(childNode);
 	}
 	
 	// innerHTML = ""; : 문자 방식으로 요소를 생성.
+	// Replacement Function : parentNode.innerHTML = html_value
 	innerHTML (parentNode, html_value) {
 		return parentNode.innerHTML = html_value;
 	}
 	
+	// Remove Child
+	// Replacement Function : parentNode.removeChild(childNode)
 	removeChild (parentNode, childNode) {
 		parentNode.removeChild(childNode);
 	}
