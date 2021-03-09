@@ -107,7 +107,7 @@ class HtmlElementAttribute {
 	}
 }
 
-// CSS
+// CSS (Cascading Style Sheets)
 class HtmlStyle {
 	
 	// Display Element
