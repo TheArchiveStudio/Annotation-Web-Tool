@@ -1,3 +1,6 @@
+//
+
+// Reference : https://developer.mozilla.org/ko/docs/Web/API/Element
 
 // Element
 class HtmlElement {
@@ -9,27 +12,27 @@ class HtmlElement {
 	}
 	
 	// Create Text Node
-	// Replacement Function : createTextNode() : 텍스트 노드를 생성
+	// Replacement Standard Function : createTextNode() : 텍스트 노드를 생성
 	createTextNode (text_value) {
 		return document.createTextNode(text_value);
 	}
 	
 	// Insert Element
-	// Replacement Function : parentNode.appendChild(childNode)
+	// Replacement Standard Function : parentNode.appendChild(childNode)
 	appendChild (parentNode, childNode) {
 		return parentNode.appendChild(childNode);
 	}
 	
 	// innerHTML = ""; : 문자 방식으로 요소를 생성.
-	// Replacement Function : parentNode.innerHTML = html_value
+	// Replacement Standard Function : parentNode.innerHTML = html_value
 	innerHTML (parentNode, html_value) {
 		return parentNode.innerHTML = html_value;
 	}
 	
 	// Remove Child
-	// Replacement Function : parentNode.removeChild(childNode)
+	// Replacement Standard Function : parentNode.removeChild(childNode)
 	removeChild (parentNode, childNode) {
-		parentNode.removeChild(childNode);
+		return parentNode.removeChild(childNode);
 	}
 }
 
@@ -37,7 +40,6 @@ class HtmlElement {
 class HtmlElementNode {
 
 	this.degree_value = 0; // 자식의 수
-
 	
 	// Parent Node 부모 노드
 	// Sibling Node 형제 노드
@@ -53,7 +55,33 @@ class HtmlElementNode {
 // Attribute
 class HtmlElementAttribute {
 	
-	// Reference : https://developer.mozilla.org/ko/docs/Web/API/Element
+	// Set Attribute
+	// Replacement Standard Function : element.setAttribute(name, value)
+	set (element, name, value) {
+		return element.setAttribute(name, value);
+	}
+	
+	// Get Attribute 
+	// Comment : 해당 요소에 지정된 값을 반환 합니다. 만약 주어진 속성이 존재 하지 않는 다면, null 값이나 ""(빈문자열); 을 반환 할 것입니다.
+	// Replacement Standard Function : element.getAttribute(name)
+	get (element, name) {
+		return element.getAttribute(name);
+	}
+	
+	// Has Attribute
+	// Replacement Standard Function : element.hasAttribute(name)
+	has (element, name) {
+		return element.hasAttribute(name);
+	}
+	
+	// Remove Attribute
+	// Replacement Standard Function : element.removeAttribute(name)
+	remove (element, name) {
+		return element.removeAttribute(name);
+	}
+}
+
+class HtmlStyle {
 	
 	// Display Element
 	display (element) {
@@ -64,30 +92,5 @@ class HtmlElementAttribute {
 	hidden (element) {
 		element.setAttribute("display", element.style.display);
 		element.style.display = "hidden";
-	}
-	
-	// Set Attribute
-	// Replacement Function : element.setAttribute(name, value)
-	set (element, name, value) {
-		return element.setAttribute(name, value);
-	}
-	
-	// Get Attribute 
-	// Comment : 해당 요소에 지정된 값을 반환 합니다. 만약 주어진 속성이 존재 하지 않는 다면, null 값이나 ""(빈문자열); 을 반환 할 것입니다.
-	// Replacement Function : element.getAttribute(name)
-	get (element, name) {
-		return element.getAttribute(name);
-	}
-	
-	// Has Attribute
-	// Replacement Function : element.hasAttribute(name)
-	has (element, name) {
-		return element.hasAttribute(name);
-	}
-	
-	// Remove Attribute
-	// Replacement Function : element.removeAttribute(name)
-	remove (element, name) {
-		return element.removeAttribute(name);
 	}
 }
