@@ -22,13 +22,13 @@ class HtmlElement {
 	}
 	
 	// Insert Element
-	// Replacement Standard Function : parentNode.appendChild(childNode)
+	// Replacement Standard Function : parentNode.appendChild(childNode);
 	appendChild (parentNode, childNode) {
 		return parentNode.appendChild(childNode);
 	}
 	
 	// innerHTML = ""; : 문자 방식으로 요소를 생성.
-	// Replacement Standard Function : parentNode.innerHTML = html_value
+	// Replacement Standard Function : parentNode.innerHTML = "html_value";
 	innerHTML (parentNode, html_value) {
 		return parentNode.innerHTML = html_value;
 	}
@@ -42,18 +42,27 @@ class HtmlElement {
 
 // Node
 class HtmlElementNode {
-
-	this.degree_value = 0; // 자식의 수
+	
+	constructor (element) {
+		
+		this.element = element;
+		this.degree_value; // 자식 노드의 수.
+		this.leafNode_state; // 자식이 없는 노드.
+		this.branchNode_state; // 차수가 0 이 아닌 노드. 즉, 자식이 있는 노드.
+	}
 	
 	// Parent Node 부모 노드
+	
 	// Sibling Node 형제 노드
+	
 	// 이전 형제
+	
 	// 다음 형제
+	
 	// 첫번재 형제
+	
 	// 마지막 형제
-
-	// external | leaf node 자식이 없는 노드.
-	// internal | branch node 차수가 0이 아닌 노드. 즉, 자식이 있는 노드.
+	
 }
 
 // Attribute
