@@ -31,6 +31,29 @@ class HtmlElementNode {
 	// 마지막 형제
 }
 
-class HtmlElementProperty {
-
+class HtmlElementAttribute {
+	
+	// Set Attribute
+	// element.setAttribute(name, value)
+	set (element, name, value) {
+		return element.setAttribute(name, value);
+	}
+	
+	// Get Attribute
+	// element.getAttribute(name)
+	get (element, name) {
+		return element.getAttribute(name);
+	}
+	
+	// Has Attribute
+	// element.hasAttribute(name)
+	has (element, name) {
+		return element.hasAttribute(name);
+	}
+	
+	// Remove Attribute
+	// element.removeAttribute(name)
+	remove (element, name) {
+		return element.removeAttribute(name);
+	}
 }
