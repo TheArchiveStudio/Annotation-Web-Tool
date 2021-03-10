@@ -1,6 +1,7 @@
 // JavaScript Document
 
 // iMAGE-ANNOTATOR
+// Comment : 
 // Full Directory : javascript \ annotator \ workspace \ image-annotator
 // Version : 0.34
 // Update Date : 2021-03-08-11-29
@@ -13,20 +14,49 @@
 // Update Date : 2021-03-10
 
 // TEST CODE
+function test_setEventListener () {
+	
+	document.getElementById("js-image-annotator__workspace__svg").addEventListener("click", test_alert_offsetXY(event));
+}
+
 function test_alert_offsetXY (cuserEventCoordinatePlane) {
+	
+	let cuserEventCoordinatePlane = new CoordinatePlane();
+	
+	cuserEventCoordinatePlane.setXy(e.offsetX, e.offsetY);
+	
 	console.log('x : ' + cuserEventCoordinatePlane.getX() + ' y : ' + cuserEventCoordinatePlane.getY());
+}
+
+function test_addSvgElement {
+	
+	var htmlElement_imageAannotator_Workspace_Svg = document.getElementById("js-image-annotator__workspace__svg");
+	
+	let htmlElement = new HtmlElement();
+	
+	let element = htmlElement.create("g");
+	
+	let htmlElementAttribute = new HtmlElementAttribute();
+	
+	htmlElementAttribute.set(element, "class", "annotation--svg-data-item-wire");
+	
+	htmlElement.appendChild(document.getElementById("js-image-annotator__workspace__annotation--svg-data-wire"), element);
 }
 
 // PAGE ONLOAD
 window.onload = function() {
 				
-	var htmlElementimageAannotatorWorkspaceSvg = document.getElementById("js-image-annotator__workspace__svg");
-	var imageAannotatorWorkspaceTargetImage = document.getElementById("image-annotator__workspace__target-image");
-	var cuserEventCoordinatePlane = new CoordinatePlane();
+	var imageAnnotator = new ImageAnnotator();
+}
+
+// IMAGE ANNOTATOR
+class ImageAnnotator {
 	
-	htmlElementimageAannotatorWorkspaceSvg.onclick = function(e) {
-		cuserEventCoordinatePlane.setXy(e.offsetX, e.offsetY);
-		test_alert_offsetXY(cuserEventCoordinatePlane);
+	construct () {
+		this.workspace_annotation_svg = document.getElementById("js-image-annotator__workspace__svg");
+		this.imageAannotatorWorkspaceTargetImage = document.getElementById("image-annotator__workspace__target-image");
+		this.workspace_annotation_svg_data_wire = document.getElementById("js-image-annotator__workspace__annotation--svg-data-wire");
+		this.cuserEventCoordinatePlane = new CoordinatePlane();
 	}
 }
 
@@ -42,21 +72,21 @@ class imageAnnotationItemShapePointList {
 	construct (item_id) {
 		
 		this.item_id = item_id;
-		this.point_list = new List();
+		this.point_list = new List() || [];
 	}
 	
 	// Set-Controll-Point__Xy
 
 	setDocumentElementControllPointXy (element, x, y) {
-		element.setAttribute("x", );
-		element.setAttribute("y", );
+		element.setAttribute("x", "");
+		element.setAttribute("y", "");
 	}
 
 	// Create-Controll-Point
 	createDocumentElementControllPoint () {
 		var element = document.createElement("use");
-		element.setAttribute("id", );
-		element.setAttribute("class", );
+		element.setAttribute("id", "");
+		element.setAttribute("class", "");
 	}
 
 	// Append-Controll-Point
