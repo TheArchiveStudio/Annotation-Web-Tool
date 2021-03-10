@@ -17,15 +17,15 @@ window.onload = function() {
 	var htmlElementimageAannotatorWorkspaceSvg = document.getElementById("js-image-annotator__workspace__svg");
 	var imageAannotatorWorkspaceTargetImage = document.getElementById("image-annotator__workspace__target-image");
 	var cuserEventCoordinatePlane = new CoordinatePlane();
-
+	
 	htmlElementimageAannotatorWorkspaceSvg.onclick = function(e) {
 		cuserEventCoordinatePlane.setXy(e.offsetX, e.offsetY);
-		testOffsetXY(cuserEventCoordinatePlane);
+		test_alert_offsetXY(cuserEventCoordinatePlane);
 	}
 }
 
 // TEST CODE START
-function testOffsetXY (cuserEventCoordinatePlane) {
+function test_alert_offsetXY (cuserEventCoordinatePlane) {
 	alert('x : ' + cuserEventCoordinatePlane.getX() + ' y : ' + cuserEventCoordinatePlane.getY());
 }
 // TEST CODE END
