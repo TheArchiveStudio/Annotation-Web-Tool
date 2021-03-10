@@ -16,9 +16,9 @@ class HtmlElement {
 		return document.createElement(tagName_value);
 	}
 	
-	// Create Element
-	// Commnet : 요소를 생성합니다.
-	// Replacement Standard Function : document.createElement("");
+	// Create SVG Element
+	// Commnet : SVG 요소를 생성합니다.
+	// Replacement Standard Function : document.createElementNS("http://www.w3.org/2000/svg", tagName_value);
 	createSVG (tagName_value) {
 		return document.createElementNS("http://www.w3.org/2000/svg", tagName_value);
 	}
