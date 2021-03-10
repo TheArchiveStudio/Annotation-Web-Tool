@@ -11,16 +11,18 @@ window.onload = function() {
 	var imageAannotatorWorkspace = document.getElementById("image-annotator__workspace");
 	var imageAannotatorWorkspaceTargetImage = document.getElementById("image-annotator__workspace__target-image");
 	
-	imageAannotatorWorkspace.onmousemove = function(e){
-		cursorX = imageAannotatorWorkspaceTargetImage.offsetX;
-		cursorY = imageAannotatorWorkspaceTargetImage.offsetY;
+	imageAannotatorWorkspace.onclick = function(e){
+		testOffsetXY();
 	}
 	
 	// Image Annotation Item List
 	var imageAnnotationItemList = new imageAnnotationItemList();
 	// + if Image Annotation Item List is Not Empty
+}
+
+funcion testOffsetXY (e) {
 	
-	
+	alert("x : " + e.offsetX + " y : " + e.offsetY);
 }
 
 /* POINT
