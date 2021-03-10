@@ -2,8 +2,8 @@
 
 // HTML ELEMENT
 // Comment : HTML 요소.
-// Version : 0.1
-// Last Update Date : 2021-03-10-01-19
+// Version : 0.11
+// Last Update Date : 2021-03-11
 // Reference : https://developer.mozilla.org/ko/docs/Web/API/Element
 
 // Element
@@ -14,6 +14,13 @@ class HtmlElement {
 	// Replacement Standard Function : document.createElement("");
 	create (tagName_value) {
 		return document.createElement(tagName_value);
+	}
+	
+	// Create Element
+	// Commnet : 요소를 생성합니다.
+	// Replacement Standard Function : document.createElement("");
+	createSVG (tagName_value) {
+		return document.createElementNS("http://www.w3.org/2000/svg", tagName_value);
 	}
 	
 	// Create Text Node
