@@ -8,10 +8,10 @@
 var coordinatePlane = new CoordinatePlane();
 
 window.onload = function() {
-	var imageAannotatorWorkspace = document.getElementById("image-annotator__workspace");
+	var htmlElementimageAannotatorWorkspaceSvg = document.getElementById("js-image-annotator__workspace__svg");
 	var imageAannotatorWorkspaceTargetImage = document.getElementById("image-annotator__workspace__target-image");
 	
-	imageAannotatorWorkspace.onclick = function(e){
+	htmlElementimageAannotatorWorkspaceSvg.onclick = function(e){
 		testOffsetXY();
 	}
 	
