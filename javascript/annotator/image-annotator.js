@@ -12,6 +12,12 @@
 // Version : 0.35
 // Update Date : 2021-03-10
 
+// TEST CODE
+function test_alert_offsetXY (cuserEventCoordinatePlane) {
+	console.log('x : ' + cuserEventCoordinatePlane.getX() + ' y : ' + cuserEventCoordinatePlane.getY());
+}
+
+// PAGE ONLOAD
 window.onload = function() {
 				
 	var htmlElementimageAannotatorWorkspaceSvg = document.getElementById("js-image-annotator__workspace__svg");
@@ -23,12 +29,6 @@ window.onload = function() {
 		test_alert_offsetXY(cuserEventCoordinatePlane);
 	}
 }
-
-// TEST CODE START
-function test_alert_offsetXY (cuserEventCoordinatePlane) {
-	alert('x : ' + cuserEventCoordinatePlane.getX() + ' y : ' + cuserEventCoordinatePlane.getY());
-}
-// TEST CODE END
 
 var coordinatePlane = new CoordinatePlane();
 
@@ -42,7 +42,7 @@ class imageAnnotationItemShapePointList {
 	construct (item_id) {
 		
 		this.item_id = item_id;
-		this.PointList = new List();
+		this.point_list = new List();
 	}
 	
 	// Set-Controll-Point__Xy
@@ -136,15 +136,15 @@ class imageAnnotationItemShapePointList {
 	// Set-Controll-Point__Xy
 
 	setDocumentElementControllPointXy (element, x, y) {
-		element.setAttribute("x", );
-		element.setAttribute("y", );
+		element.setAttribute("x", "");
+		element.setAttribute("y", "");
 	}
 
 	// Create-Controll-Point
 	createDocumentElementControllPoint () {
 		var element = document.createElement("use");
-		element.setAttribute("id", );
-		element.setAttribute("class", );
+		element.setAttribute("id", "");
+		element.setAttribute("class", "");
 	}
 
 	// Append-Controll-Point
