@@ -36,6 +36,7 @@ function test_addSvgElement (event) {
 	
 	htmlElementAttribute.set(elementPolygonBox, "class", "item polygon-rect polygon-bounding-rect--selected cursor--cross-cursor");
 	
+	// * Re: Set Points Attribute Value
 	htmlElementAttribute.set(elementPolygonBox, "points", event.offsetX + "," + event.offsetY + " " + (event.offsetX+100) + "," + event.offsetY + " " + (event.offsetX+100) + "," + (event.offsetY+100) + " " + event.offsetX + "," + (event.offsetY+100));
 							 
 	htmlElement.appendChild(elementG, elementPolygonBox);
