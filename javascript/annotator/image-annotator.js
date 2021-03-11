@@ -7,6 +7,19 @@
 // Update Date : 2021-03-11
 
 // TEST CODE
+
+// 할 일
+// * 1. 커서 좌표 클래스 = 클릭 커서 위치 클랫스
+// * 2. 커서 좌표 클래스 = 커서 이동 위치 클래스
+
+// 1. 클릭 , 저장
+// 2. 박스의 경우 세번째 점이 커서의 이동 위치를 추적하여 변경되는 이벤트
+//    폴리곤의 경우 다음 점이
+// 3. 클릭, 커서 위치 추적 이벤트 해제 , 실시간 변경 해제
+// 4. 박스의 경위 두번째 클릭에 3 으로 종료
+//    폴리곤의 경우 다음 점 추가 2 실행
+//    더블 클릭 혹은 첫번째 점 클릭시 3 실행 종료
+
 function test_setEventListener () {
 	
 	document.getElementById("js-image-annotator__workspace__svg").addEventListener("click", test_alert_offsetXY);
