@@ -88,7 +88,7 @@ window.onload = function() {
 // IMAGE ANNOTATOR
 class ImageAnnotator {
 	
-	construct () {
+	constructor () {
 		this.workspace_annotation_svg = document.getElementById("js-image-annotator__workspace__svg");
 		this.imageAannotatorWorkspaceTargetImage = document.getElementById("image-annotator__workspace__target-image");
 		this.workspace_annotation_svg_data_wire = document.getElementById("js-image-annotator__workspace__annotation--svg-data-wire");
@@ -98,7 +98,7 @@ class ImageAnnotator {
 	setHTMLElementEventListener () {
 		
 		// Click Workspace SVG Event
-		this.workspace_annotation_svg.addEventListener("click", test_consoleLog_offsetXY);
+		workspace_annotation_svg.addEventListener("click", test_consoleLog_offsetXY);
 	}
 }
 
