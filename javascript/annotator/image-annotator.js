@@ -22,6 +22,7 @@
 
 function test_setEventListener () {
 	
+	// Click Workspace SVG Event
 	document.getElementById("js-image-annotator__workspace__svg").addEventListener("click", test_alert_offsetXY);
 }
 
@@ -58,10 +59,28 @@ function test_addSvgElement (event) {
 	// 3. 요소 목록 추가
 }
 
+// Image Annotator
+var imageAnnotator;
+
+// Mouse Click Coordinate Plane
+var mouseClickCoordinatePlane;
+	
+// Mouse Cuser Move Coordinate Plane
+var mouseCuserMoveCoordinatePlane;
+
 // PAGE ONLOAD
 window.onload = function() {
-				
-	this.imageAnnotator = new ImageAnnotator();
+	
+	// Set Image Annotator
+	imageAnnotator = new ImageAnnotator();
+	
+	// Set Mouse Click Coordinate Plane
+	mouseClickCoordinatePlane = new CoordinatePlane();
+	
+	// Set Mouse Cuser Move Coordinate Plane
+	mouseCuserMoveCoordinatePlane = new CoordinatePlane();
+	
+	// Test Code - Set Event Listener
 	test_setEventListener();
 	
 }
