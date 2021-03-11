@@ -12,7 +12,7 @@
 */
 
 // Image Annotation Item List : 아이템 목록
-class imageAnnotation_ItemList {
+class ImageAnnotationItemList {
 	
 	construct (data_id) {
 		
