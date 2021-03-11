@@ -20,12 +20,6 @@
 //    폴리곤의 경우 다음 점 추가 2 실행
 //    더블 클릭 혹은 첫번째 점 클릭시 3 실행 종료
 
-function test_setEventListener () {
-	
-	// Click Workspace SVG Event
-	document.getElementById("js-image-annotator__workspace__svg").addEventListener("click", test_alert_offsetXY);
-}
-
 function test_consoleLog_offsetXY (event) {
 	console.log('x : ' + event.offsetX + ' y : ' + event.offsetY);
 	
@@ -55,18 +49,14 @@ function test_addSvgElement (event) {
 							 
 	htmlElement.appendChild(elementG, elementPolygonBox);
 	
+	
+	
 	// 1. 요소 생성 <- 2.요소 점 목록 생성
 	// 3. 요소 목록 추가
 }
 
 // Image Annotator
 var imageAnnotator;
-
-// Mouse Click Coordinate Plane
-var mouseClickCoordinatePlane;
-	
-// Mouse Cuser Move Coordinate Plane
-var mouseCuserMoveCoordinatePlane;
 
 // PAGE ONLOAD
 window.onload = function() {
@@ -89,9 +79,24 @@ window.onload = function() {
 class ImageAnnotator {
 	
 	constructor () {
+		
+		// Set HTML Element
+		
+		// Workspace Annotation SVG
 		this.workspace_annotation_svg = document.getElementById("js-image-annotator__workspace__svg");
+		// SVG In Target Image
 		this.imageAannotatorWorkspaceTargetImage = document.getElementById("image-annotator__workspace__target-image");
+		// SVG Data Wire
 		this.workspace_annotation_svg_data_wire = document.getElementById("js-image-annotator__workspace__annotation--svg-data-wire");
+		
+		//
+		
+		// Mouse Click Coordinate Plane
+		this.mouseClickCoordinatePlane = new CoordinatePlane();
+		
+		// Mouse Cuser Move Coordinate Plane
+		this.mouseCuserMoveCoordinatePlane = new CoordinatePlane();
+		
 		this.cuserEventCoordinatePlane = new CoordinatePlane();
 	}
 	
