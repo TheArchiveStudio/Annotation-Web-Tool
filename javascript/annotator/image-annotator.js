@@ -26,7 +26,7 @@ function test_setEventListener () {
 	document.getElementById("js-image-annotator__workspace__svg").addEventListener("click", test_alert_offsetXY);
 }
 
-function test_alert_offsetXY (event) {
+function test_consoleLog_offsetXY (event) {
 	console.log('x : ' + event.offsetX + ' y : ' + event.offsetY);
 	
 	test_addSvgElement(event);
@@ -81,7 +81,7 @@ window.onload = function() {
 	mouseCuserMoveCoordinatePlane = new CoordinatePlane();
 	
 	// Test Code - Set Event Listener
-	test_setEventListener();
+	imageAnnotator.setHTMLElementEventListener();
 	
 }
 
@@ -93,6 +93,12 @@ class ImageAnnotator {
 		this.imageAannotatorWorkspaceTargetImage = document.getElementById("image-annotator__workspace__target-image");
 		this.workspace_annotation_svg_data_wire = document.getElementById("js-image-annotator__workspace__annotation--svg-data-wire");
 		this.cuserEventCoordinatePlane = new CoordinatePlane();
+	}
+	
+	setHTMLElementEventListener () {
+		
+		// Click Workspace SVG Event
+		this.workspace_annotation_svg.addEventListener("click", test_consoleLog_offsetXY);
 	}
 }
 
