@@ -98,7 +98,7 @@ class ImageAnnotator {
 	setHTMLElementEventListener () {
 		
 		// Click Workspace SVG Event
-		workspace_annotation_svg.addEventListener("click", test_consoleLog_offsetXY);
+		this.workspace_annotation_svg.addEventListener("click", test_consoleLog_offsetXY);
 	}
 }
 
@@ -111,7 +111,7 @@ var coordinatePlane = new CoordinatePlane();
 // Image Annotation Item Shape Point List : 한 아이템의 포인트 목록
 class imageAnnotationItemShapePointList {
 	
-	construct (item_id) {
+	constructor (item_id) {
 		
 		this.item_id = item_id;
 		this.point_list = new List() || [];
