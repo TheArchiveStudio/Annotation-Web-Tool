@@ -21,9 +21,17 @@
 //    더블 클릭 혹은 첫번째 점 클릭시 3 실행 종료
 
 function test_consoleLog_offsetXY (event) {
-	console.log('x : ' + event.offsetX + ' y : ' + event.offsetY);
+	
+	// console.log('x : ' + event.offsetX + ' y : ' + event.offsetY);
 	
 	test_addSvgElement(event);
+}
+
+function test_consoleLog_curserTracking (event) {
+	
+	imageAnnotator.cuserMoveCoordinatePlane.setXy(event.offsetX, event.offsetY);
+	
+	// console.log('x : ' + imageAnnotator.cuserMoveCoordinatePlane.getX() + ' y : ' + imageAnnotator.cuserMoveCoordinatePlane.getY());
 }
 
 function test_addSvgElement (event) {
@@ -42,14 +50,14 @@ function test_addSvgElement (event) {
 	
 	var elementPolygonBox = htmlElement.createSVG("polygon");
 	
-	htmlElementAttribute.set(elementPolygonBox, "class", "item polygon-rect polygon-bounding-rect--selected cursor--cross-cursor");
+	htmlElementAttribute.set(elementPolygonBox, "class", "item polygon-rect polygon-bounding-rect--unselected cursor--cross-cursor");
 	
 	// * Re: Set Points Attribute Value
 	htmlElementAttribute.set(elementPolygonBox, "points", event.offsetX + "," + event.offsetY + " " + (event.offsetX+100) + "," + event.offsetY + " " + (event.offsetX+100) + "," + (event.offsetY+100) + " " + event.offsetX + "," + (event.offsetY+100));
 							 
 	htmlElement.appendChild(elementG, elementPolygonBox);
 	
-	
+	imageAnnotator.imageAnnotationItemList
 	
 	// 1. 요소 생성 <- 2.요소 점 목록 생성
 	// 3. 요소 목록 추가
@@ -64,13 +72,7 @@ window.onload = function() {
 	// Set Image Annotator
 	imageAnnotator = new ImageAnnotator();
 	
-	// Set Mouse Click Coordinate Plane
-	mouseClickCoordinatePlane = new CoordinatePlane();
-	
-	// Set Mouse Cuser Move Coordinate Plane
-	mouseCuserMoveCoordinatePlane = new CoordinatePlane();
-	
-	// Test Code - Set Event Listener
+	// Set Event Listener
 	imageAnnotator.setHTMLElementEventListener();
 	
 }
@@ -79,6 +81,8 @@ window.onload = function() {
 class ImageAnnotator {
 	
 	constructor () {
+		
+		this.imageAnnotationItemList = new ImageAnnotationItemList();
 		
 		// Set HTML Element
 		
@@ -94,16 +98,19 @@ class ImageAnnotator {
 		// Mouse Click Coordinate Plane
 		this.mouseClickCoordinatePlane = new CoordinatePlane();
 		
-		// Mouse Cuser Move Coordinate Plane
-		this.mouseCuserMoveCoordinatePlane = new CoordinatePlane();
+		// Cuser Move Coordinate Plane
+		this.cuserMoveCoordinatePlane = new CoordinatePlane();
 		
 		this.cuserEventCoordinatePlane = new CoordinatePlane();
 	}
 	
 	setHTMLElementEventListener () {
 		
-		// Click Workspace SVG Event
+		// Set Mouse Click Coordinate Plane
 		this.workspace_annotation_svg.addEventListener("click", test_consoleLog_offsetXY);
+		
+		// Set Mouse Cuser Move Coordinate Plane
+		this.workspace_annotation_svg.addEventListener("mousemove", test_consoleLog_curserTracking);
 	}
 }
 
