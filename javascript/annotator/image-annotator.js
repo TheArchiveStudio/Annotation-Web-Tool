@@ -57,7 +57,13 @@ function test_addSvgElement (event) {
 							 
 	htmlElement.appendChild(elementG, elementPolygonBox);
 	
-	imageAnnotator.imageAnnotationItemList
+	// 아이템 생성
+	let imageAnnotationItem = ImageAnnotationItem();
+	
+	// (*Working Point) 아이템 설정
+	// imageAnnotationItem.shapePointList.
+	
+	imageAnnotator.imageAnnotationItemList;
 	
 	// 1. 요소 생성 <- 2.요소 점 목록 생성
 	// 3. 요소 목록 추가
@@ -93,15 +99,12 @@ class ImageAnnotator {
 		// SVG Data Wire
 		this.workspace_annotation_svg_data_wire = document.getElementById("js-image-annotator__workspace__annotation--svg-data-wire");
 		
-		//
+		// Coordinate Plane
 		
 		// Mouse Click Coordinate Plane
 		this.mouseClickCoordinatePlane = new CoordinatePlane();
-		
 		// Cuser Move Coordinate Plane
 		this.cuserMoveCoordinatePlane = new CoordinatePlane();
-		
-		this.cuserEventCoordinatePlane = new CoordinatePlane();
 	}
 	
 	setHTMLElementEventListener () {
