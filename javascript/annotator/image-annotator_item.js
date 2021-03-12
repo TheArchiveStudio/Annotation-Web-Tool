@@ -37,7 +37,7 @@ class ImageAnnotationItemList {
 	}
 }
 
-class imageAnnotationItem {
+class ImageAnnotationItem {
 	
 	construct () {
 		this.data_id = "";
